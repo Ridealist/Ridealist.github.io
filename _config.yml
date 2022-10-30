@@ -105,15 +105,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Ridi"
+  name             : "Junbo Koh"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am an **ongoing** developer."
-  location         : "Seoul"
+  location         : "Seoul, South Korea"
   email            :
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      # url: "cjsn92@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -290,5 +290,7 @@ defaults:
       read_time: true
       comments: # true
       share: true
-      related: true
+      related: false
       show_date: true
+      sidebar:
+        nav: "sidebar-category"
