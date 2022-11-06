@@ -4,7 +4,10 @@ layout: posts
 title: 우테코 프리코스 미션 규칙
 categories: 
   - woowacourse
+toc: true
 ---
+
+## 여는 글
 
 이번 글에서는 우테코 프리코스 미션을 진행하면서 내가 지켜야 할 규칙들을 정리해보려고한다.
 
@@ -140,6 +143,8 @@ String result = String.join(",", members); // "pobi,jason"
 
 
 ---
+
+## 닫는 글
 
 이상의 것들을 지금 모두 내것으로 만들기는 어려울 것 같다.
 
