@@ -61,3 +61,79 @@ TODO `AngularJS 커밋 메시지 컨벤션` 번역해보기
 - [[10분 테코톡] 🎲 와일더의 Git Commands](https://www.youtube.com/watch?v=JsRD2AWxxFg&ab_channel=%EC%9A%B0%EC%95%84%ED%95%9CTech)
 - [git - 간편 안내서](https://rogerdudler.github.io/git-guide/index.ko.html)
 - [git과 github_inflearn강의](https://www.inflearn.com/course/git-and-github#curriculum)
+
+
+## 3. Java 코딩 컨벤션
+
+- [Java 코드 컨벤션 가이드](https://github.com/woowacourse/woowacourse-docs/tree/main/styleguide/java)
+
+결국 코드는 내가 작성하는 시간보다 남들이 읽는 시간이 더 많이 소요된다.
+
+좋은 코드란 다른 사람이 읽기 쉬운 코드이고, 가독성을 위해 모두가 합의한 규칙(문법)인 코딩 컨벤션에 맞춰 작성해야 한다.
+
+아래는 코치님이 1주차 공통 피드백에서 알려주신 내용. 숙지하고 항상 체크하자!
+
+- 공백도 코딩 컨벤션이다
+    - if, for, while문 사이의 공백도 코딩 컨벤션이다
+- 공백 라인을 의미 있게 사용한다
+    - 공백은 문맥을 분리하는 부분에 사용하는 것이 좋다
+    - 과도한 공백은 다른 개발자에게 의문을 줄 수 있다
+- space와 tab을 혼용하지 않는다
+    - 들여쓰기에 space와 tab을 혼용하지 않는다. 둘 중에 하나만 사용한다
+- IDE의 `코드 자동 정렬 기능`을 활용한다
+    - IDE의 코드 자동 정렬 기능을 사용하면 더 깔끔한 코드를 볼 수 있다
+        - IntelliJ IDEA: `⌥⌘L`, `Ctrl+Alt+L`
+        - Eclipse: `⇧⌘F`, `Ctrl+Shift+F`
+
+
+## 4. 클린 코드를 위한 원칙들
+
+### 4-1. 객체지향 생활 체조 원칙 9가지
+
+`The ThoughtWorks Anthology`라는 책에 나오는 내용이라고 한다
+
+- [woowacourse_pr_checklist](https://github.com/woowacourse/woowacourse-docs/blob/main/cleancode/pr_checklist.md)
+- [[Refactoring] 객체지향 생활 체조 원칙_블로그](https://blogshine.tistory.com/241)
+
+
+### 4-2. 좋은 이름 짓기
+
+> 이름을 통해 의도를 드러낸다!
+
+- 변수 이름, 함수(메서드) 이름, 클래스 이름을 짓는데 시간을 투자하라
+- 이름을 통해 변수의 역할, 함수의 역할, 클래스의 역할에 대한 의도를 드러내기 위해 노력하라
+    - 연속된 숫자를 덧붙이거나(a1, a2, ..., aN) 방식
+    - 불용어(Info, Data, a, an, the)를 추가하는 방식등은 적절하지 못하다
+
+### 4-3. 축약하지 않기
+
+- 의도를 드러낼 수 있다면 이름이 길어져도 괜찮다.
+
+- 객체 지향 생활 체조 원칙 5: 줄여쓰지 않는다 (축약 금지)
+
+> 누구나 실은 클래스, 메서드, 또는 변수의 이름을 줄이려는 유혹에 곧잘 빠지곤 한다. 그런 유혹을 뿌리쳐라. 축약은 혼란을 야기하며, 더 큰 문제를 숨기는 경향이 있다. 클래스와 메서드 이름을 한 두 단어로 유지하려고 노력하고 문맥을 중복하는 이름을 자제하자. 클래스 이름이 Order라면 shipOrder라고 메서드 이름을 지을 필요가 없다. 짧게 ship()이라고 하면 클라이언트에서는 order.ship()라고 호출하며, 간결한 호출의 표현이 된다.
+
+
+### 4-4. 의미 없는 주석 달지 않기
+- `좋은 이름 짓기`가 선행된다면 주석은 대부분 불필요하다
+    - 변수 이름, 함수(메서드) 이름을 통해 어떤 의도인지가 드러난다면 굳이 주석을 달지 않는다
+- 가능하면 `이름`을 통해 의도를 드러낸다
+    - 의도를 드러내기 힘든 경우 주석을 단다
+
+
+
+## 5. Java 언어에 대한 이해
+
+- Java에서 제공하는 API를 적극 활용한다
+    - 함수(메서드)를 직접 구현하기 전에 Java API에서 제공하는 기능인지 검색을 먼저 해본다
+    - Java API에서 제공하지 않을 경우 직접 구현한다
+
+```java
+//사용자가 2명 이상이면 쉼표(,) 기준으로 출력을 위한 문자열 만들기
+
+List<String> members = Arrays.asList("pobi", "jason");
+String result = String.join(",", members); // "pobi,jason"
+```
+
+- 배열 대신 Java Collection Framework(JCF)을 사용한다
+    - Java Collection 자료구조(List, Set, Map 등)를 사용하면 데이터를 조작할 때 다양한 API를 사용할 수 있다
