@@ -22,7 +22,9 @@ main:
 sidebar-category:
   - title: "우아한테크코스"
     url: "/woowacourse/"
-  - title: "java"
+  - title: "Java"
     url: "/java/"
+  - title: "Design Pattern"
+    url: "/designpattern/"
   - title: "기타"
     url: "/etc/"
