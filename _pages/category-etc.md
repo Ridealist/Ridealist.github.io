@@ -1,7 +1,7 @@
 ---
 title: "ETC"
 layout: archive
-permalink: /etc
+permalink: /etc/
 author_profile: true
 sidebar:
   nav: "sidebar-category"

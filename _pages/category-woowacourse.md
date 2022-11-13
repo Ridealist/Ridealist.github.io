@@ -1,7 +1,7 @@
 ---
 title: "WoowaCourse"
 layout: archive
-permalink: /woowacourse
+permalink: /woowacourse/
 author_profile: true
 sidebar:
   nav: "sidebar-category"
