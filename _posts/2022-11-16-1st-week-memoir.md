@@ -3,7 +3,7 @@ published: true
 layout: posts
 title: 1주차 과제 피드백 정리
 categories: 
-  - java
+  - woowacourse
 toc: true
 ---
 
