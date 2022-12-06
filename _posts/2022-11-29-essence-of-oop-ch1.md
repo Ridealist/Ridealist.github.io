@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 1. 협력하는 객체들의 공동체
+title: Ch1. 협력하는 객체들의 공동체
 categories: 
   - java
 toc: true
