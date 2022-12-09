@@ -3,7 +3,7 @@ published: true
 layout: posts
 title: Ch3. 타입과 추상화
 categories: 
-  - java
+  - oop
 toc: true
 ---
 
