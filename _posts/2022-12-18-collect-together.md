@@ -111,3 +111,6 @@ public class MenuBoard {
 	}
 }
 ```
+
+- 참고 블로그
+    - [객체지향의 사실과 오해 - 개념, 명세, 구현](https://ocwokocw.tistory.com/185)
