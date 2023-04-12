@@ -39,7 +39,7 @@ categories:
 
 ### 2. "The Design of an Intelligent Automaton"
 - Perceptron 개념 구상
-    - https://needjarvis.tistory.com/181
+    - [참고 블로그](https://needjarvis.tistory.com/181)
 - 인공 신경계 + 학습 / 이를 적용한 기계 개발
     
     **-> single layer perceptron은 XOR 문제를 해결하지 못한다**
