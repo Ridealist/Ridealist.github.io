@@ -23,20 +23,23 @@
 
 ## Neural Network: A Brief History
 
-1. “A Logical Calculus of the Ideas Immanent in Nervous Activity"
+### 1. “A Logical Calculus of the Ideas Immanent in Nervous Activity"
 
 - 인공 신경망의 최초의 수학적 모델
 - 실제 신경계의 단순화된 모델은 덧셈과 역치값을 활용해 나타낼 수 있음
+
 >신경계는 역치를 넘어서면 신호가 전달되는 방식. 즉 'all-or-none' 특징 이므로 이는 결국 수학적 논리식(Propositional Logic)으로 나타낼 수 있음.
 
 
-2. "The Design of an Intelligent Automaton"
+### 2. "The Design of an Intelligent Automaton"
 - Perceptron 개념 구상
+    - https://needjarvis.tistory.com/181
 - 인공 신경계 + 학습 / 이를 적용한 기계 개발
+    
+    **-> single layer perceptron은 XOR 문제를 해결하지 못한다**
 
--> single layer perceptron은 XOR 문제를 해결하지 못한다
 
-3. PDP(Parallel Destributed Processing)
+### 3. PDP(Parallel Destributed Processing)
 - 실제 뇌가 작동하는 방식을 최대한 본떠서 컴퓨터를 작동하게 하자
 - PDP의 요구 조건
     - A set of processing units
@@ -48,13 +51,14 @@
     - A learning rule whereby patterns of connectivity are modified by experience
     - An environment within which the system must operate
 
-4. 2단의 layer로 구성된 뉴런
+
+### 4. 2단의 layer로 구성된 뉴런
 - XOR 문제 해결
 - 수학적으로 모든 함수형태에 근사 가능
 
--> 실제로 너무 크거나 너무 느려서 사용하기에 부적합
+    **-> 실제로 너무 크거나 너무 느려서 사용하기에 부적합**
 
-5. 지금의 Deep Learning
+### 5. 지금의 Deep Learning
 - 여러단의 layers + 컴퓨터 하드웨어 + 데이터 + 알고리즘의 조합으로 신경망이 더욱 빠르고 쉽게 학습 가능
 
 ![image](https://www.researchgate.net/publication/346219836/figure/fig1/AS:980115399913472@1610689129209/Schematic-of-shallow-neural-network-and-deep-neural-network.ppm)
@@ -101,10 +105,10 @@ motivation.’
 
 ### PyTorch, fastai, Jupyter
 
-1. PyTorch vs. TensorFlow
+### 1. PyTorch vs. TensorFlow
     - https://youtu.be/z7F91vilnDc
 
-2. fastai : PyTorch 기반으로 고수준 기능을 추가한 Library
+### 2. fastai : PyTorch 기반으로 고수준 기능을 추가한 Library
 
     - 고수준 개념: fastai
     - 저수준 개념: PyTroch, Python
@@ -116,7 +120,7 @@ motivation.’
     - 그것을 어떻게 실제적으로 활용하는지
     - 새로운 툴과 기술들에 대한 전문지식을 어떻게 빠르게 쌓을지
 
-3. Jupyter : Intereaction 형식으로 python 코드를 작성할 수 있는 플랫폼
+### 3. Jupyter : Intereaction 형식으로 python 코드를 작성할 수 있는 플랫폼
 - 딥러닝은 코드를 치고 실험해보는 과정이 무엇보다도 중요
 - 코드 실험이 편한 플랫폼 중 하나
 
