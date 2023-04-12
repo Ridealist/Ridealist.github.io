@@ -20,13 +20,15 @@ main:
 # [권장]
 # 1. CSS 적용 문제로 children 깊이는 2까지만 하는것을 권장. 즉, children의 children까지만.
 sidebar-category:
-  - title: "우아한테크코스"
-    url: "/woowacourse/"
+  - title: "DL4Coders"
+    url: "/dl4coders/"
   - title: "Java"
     url: "/java/"
   - title: "OOP"
     url: "/oop/"
   - title: "Design Pattern"
     url: "/designpattern/"
+  - title: "우아한테크코스"
+    url: "/woowacourse/"
   - title: "기타"
     url: "/etc/"
