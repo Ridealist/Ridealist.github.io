@@ -27,3 +27,4 @@ gem "jekyll-toc"
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
 end
+gem "faraday-retry", "~> 2.1"
