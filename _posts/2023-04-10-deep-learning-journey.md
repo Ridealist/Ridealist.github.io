@@ -1,4 +1,10 @@
-# 1. Your Deep Learning Journey
+---
+published: true
+layout: posts
+title: Ch1. Your Deep Learning Journey
+categories: 
+  - dl4coders
+---
 
 ## Deep Learning If For Everyone
 
