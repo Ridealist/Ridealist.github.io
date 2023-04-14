@@ -131,4 +131,91 @@ learn.fine_tune(1)
 - 자동화
   - 가중치 할당을 자동 업데이트하는 mechanism = SGD
 
+### 5. 딥러닝 전문용어 맛보기
 
+- 'model'의 함수적 형태 = 아키텍쳐 architecture
+- 'weight' = 'parameter'
+- 에측값(prediction) = labels가 없는 데이터인 독립적인 변수들(independent variable)로부터 계산되는 값
+- labels = targets
+- 모델의 결과(result) = 예측값
+- 성능(performance)의 측정 = 손실(loss)
+- 손실은 '예측값'과 '올바른 labels'에 둘다 영향을 받음
+
+![image](/assets/img/스크린샷 2023-04-14 오후 9.55.52 1.png)
+
+### 6. 머신 러닝의 한계
+
+- 데이터가 항상 필요하다
+- 학습에 사용된 데이터에서 발견할 수 있는 패턴만 배울 수 있다
+- 머신러닝은 오닉 예측(predictions)만 할 수 있을뿐, 추천된 행동(recommended actions)을 할 수 없다
+  - 추천시스템은 사용자가 관심을 가질만한 **새로운 상품** 보다는 써봤거나 알고 있는 상품은 추천해주게 된다
+- 단순히 데이터가 아닌 labeled 데이터가 필요하다
+  - labeling approach가 실제적으로 매우 중요한 이슈이다
+- `feedback loops`문제
+  - 모델이 더 사용될수록 더 편향된 데이터가 생성되고 이것에 의해 더 편향된 모델이 만들어지는 과정을 반복하게 됨
+
+### 7.이미지 분류기의 작동 원리
+
+#### Classification vs. Regression
+- 분류: 클래스나 카테고리를 예측하기 위한 모델
+  - 숫자나 이산적인 수치를 예상하기 위한 것
+  - ex. 개?고양이?
+- 회귀: 수치적인 양을 예측하기 위한 모델
+  - ex. 기온/위치
+
+#### Overfitting 과적합
+- 머신 러닝 학습에서 항상 고려해야하는 중요한 이슈
+- 학습된 데이터에서 잘 예측하는 것보다, **새로운 데이터**에서 잘 예측하는 것이 훨씬 어렵고 또 중요!
+- The data will matter in practice
+  - ex. MNIST dataset
+  - 어떤 데이터도 같은게 없음(조금씩 다름)
+
+> BUT, 과적합이 일어났을 때 과적합을 방지하기!
+
+- validation 정확도가 학습에 따라 떨어짐 -> 과적합
+- 모델이 도달할 수 있는 높은 정확도 수준에 못미치게 학습을 마치는 경우 -> underfitting
+
+#### metrics 평가 지표
+- validation set을 이용해 모델이 예측한 값의 품질을 측정하는 함수
+  - 매 epoch가 끝날때마다 출력됨
+
+loss 손실 함수 vs. metrics 평가 지표
+- loss = 학습 시스템이 가중치를 자동으로 갱신하는데 사용되는 "수행 능력의 측정"을 정의하는 목적
+  - 좋은 손실 함수란 SGD를 적용하기 좋은 선택이어야 함
+- metric = 사람이 이해하기 위한 목적
+  - 좋은 평가 지표는 이해하기 쉬운 선택지
+  - 내가 모델에게 기대하는 task를 최대한 잘 반영해야 함
+
+#### pretrained model 사전 학습 모델
+- 이미 다른 데이터셋에서 학습된 가중치를 가진 모델
+  - ex. 1.3M 이미지로 천개의 다를 카테고리를 인식하는 학습된 모델 
+- pretrained = 모델의 가중치를 이미 사전 훈련된 모델의 가중치로 맞추는 것
+- 대부분의 경우 이런 모델을 사용
+  - 이미 성능이 훌륭함
+
+`head`
+- pretrained model의 마지막 부분
+- 사전 학습 모델을 사용할 경우 마지막 layer를 삭제함
+  - 기존의 학습 task에 맞춰져 있기 때문
+- 1개 이상의 랜덤 가중치를 가진 새로운 layer로 대체함
+  - 작업하려는 데이터셋의 사이즈에 맞춤
+
+- 사전 학습 모델을 사용하는 것은 매우 매우 중요
+  - 더 빠르고, 적은 시간과 돈을 들려 더 정확한 모델은 만들 수 있음
+- <a>사전 학습 모델을 활용하면 적은 자원을 가지고서도 Deep Learning을 이용한 많은 작업을 할 수 있음</a>
+
+#### transfer learning 전이 학습
+- 처음 학습시킨 task와 다른 일을 하도록 pretrained model을 활용하는 것
+- 아직 많이 연구되지 못한 분야...
+  - 사용가능한 prtrained model이 있는 domain이 한정적
+  - 시계열 분석에서 transfer learning이 어떻게 솽용되어야 하는지 아직 잘 모르고 있는 상황
+
+#### fine tuning 파인 튜닝
+- pretrained model을 새로운 데이터셋에 적용하기 위한 중요한 'trick' 중 하나
+- 사전 학습과 다른 task를 추가적인 epochs만큼 학습하여 pretrained model의 파라미터값을 갱신하는 전이 학습 방법론(transfer learning technique)
+
+#### Jargon : 몇가지 용어
+- 모델의 head : 새로운 데이터셋에 맞춰져서 새롭게 추가된 부분
+- epoch : 데이터셋 전체를 완전히 한번 훑는 것
+(fit이 수행된 이후에)
+- training set losses & validation set losses = 각 데이터셋 별 수행 능력의 측정
