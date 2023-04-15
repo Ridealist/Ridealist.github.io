@@ -219,3 +219,49 @@ loss 손실 함수 vs. metrics 평가 지표
 - epoch : 데이터셋 전체를 완전히 한번 훑는 것
 (fit이 수행된 이후에)
 - training set losses & validation set losses = 각 데이터셋 별 수행 능력의 측정
+
+#### Image Recognizer가 학습한 것
+- 머신 러닝 모델은 이해가 불가능한 'black box'가 아니다
+  - 학습된 데이터와 다른 데이터가 들어 갔을 때 어떤 모습을 보이는지 예측하는 것을 어렵긴 함
+
+- ‘Visualizing and Understanding Convolutional Networks’
+  - [논문 PDF](https://arxiv.org/pdf/1311.2901.pdf)
+  - 모델의 매 layer에서 학습된 신경망 가중치를 시각화해서 보여줌
+
+
+
+‘For each layer, the image part with the light gray background shows the reconstructed weights,
+the larger section at the bottom shows the parts of the training images that most strongly matched each set of weights. ’
+
+(사진)
+
+- For layer 1
+  - the model has discovered weights that represent diagonal, horizontal, and vertical edges, as well as various gradients.
+  - Computer Vision의 기본 구성 요소가 됨
+    - 사람의 눈의 시각 매커니즘과 매우 동일
+    - 손으로 작성된 컴퓨터 비전 특징과도 유사
+
+(사진)
+
+- For layer 2
+  - there are nine examples of weight reconstructions for each of the features found by the model
+  - the model has learned to create feature detectors that look for corners, repeating lines, circles, and other simple patterns
+  - These are built from the basic building blocks developed in the first layer.
+    - For each of these, the righthand side of the picture shows small patches from actual images that these features most closely match.
+    - For instance, the particular pattern in row 2, column 1 matches the gradients and textures associated with sunsets.
+
+(사진)
+
+- For layer 3
+  - righthand side of this picture, the features are now able to identify and match with higher-level semantic components, such as car wheels, text, an flower petals
+  - Using these components, layers 4 and 5 can identify even higher-level concepts
+
+(사진)
+
+- 위 연구는 5개의 Layer로 이루어진 `AlexNet`이라는 오래된 모델을 사용
+- 수백개의 layer로 이루어진 Neural Network의 경우 **훨씬 더 풍성한 특징**들을 모델들이 구성할 수 있을 것임
+
+- pretrained model을 fine-tuning하면 마지막 layer가 포커싱하는 특징들을 채택할 수 있음 (꽃, 사람, 동물 등)
+  - 여기에 개와 고양이 분류 문제를 특화시킴
+
+- 일반적으로, pretrained model은 다른 여러가지 작업들에도 특화될 수 있음
