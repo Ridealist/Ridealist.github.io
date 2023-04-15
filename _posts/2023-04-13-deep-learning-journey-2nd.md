@@ -92,7 +92,7 @@ learn.fine_tune(1)
 
 ### 4. 신경망이란? Neural Network
 
-> 매우매우 유연해서 가중치만 변경할 경우 어떤 문제에도 적용할 수 있는 `함수`가 없을까?
+> 매우 유연해서 가중치만 변경할 경우 어떤 문제에도 적용할 수 있는 `함수`가 없을까?
 
 - 이것이 바로 신경망!
   - neural network = 하나의 수학적 함수
@@ -115,7 +115,7 @@ learn.fine_tune(1)
 
 결론!
 
-> 개-고양이 분류기 === 머신러닝 모델
+**개-고양이 분류기 == 머신러닝 모델**
 
 - 구조
   - input = 이미지들
@@ -193,7 +193,7 @@ loss 손실 함수 vs. metrics 평가 지표
 - 대부분의 경우 이런 모델을 사용
   - 이미 성능이 훌륭함
 
-`head`
+#### head
 - pretrained model의 마지막 부분
 - 사전 학습 모델을 사용할 경우 마지막 layer를 삭제함
   - 기존의 학습 task에 맞춰져 있기 때문
@@ -202,7 +202,10 @@ loss 손실 함수 vs. metrics 평가 지표
 
 - 사전 학습 모델을 사용하는 것은 매우 매우 중요
   - 더 빠르고, 적은 시간과 돈을 들려 더 정확한 모델은 만들 수 있음
-- <a>사전 학습 모델을 활용하면 적은 자원을 가지고서도 Deep Learning을 이용한 많은 작업을 할 수 있음</a>
+- **<u>사전 학습 모델을 활용하면 적은 자원을 가지고서도 Deep Learning을 이용한 많은 작업을 할 수 있음</u>**
+  - [Hugging Face](https://huggingface.co/models)
+  - [timm](https://github.com/rwightman/timm)
+  - [LAION](https://laion.ai/projects/)
 
 #### transfer learning 전이 학습
 - 처음 학습시킨 task와 다른 일을 하도록 pretrained model을 활용하는 것
@@ -229,34 +232,32 @@ loss 손실 함수 vs. metrics 평가 지표
   - 모델의 매 layer에서 학습된 신경망 가중치를 시각화해서 보여줌
 
 
+1. layer에서 회색 배경 그림은 재구조화된 가중치(reconstructed weights)를 나타냄
+2. 다른 그림은 각각의 가중치 설정값(set of weights)에서 가장 매치가 잘되는 학습 이미지의 일부분을 보여줌
 
-‘For each layer, the image part with the light gray background shows the reconstructed weights,
-the larger section at the bottom shows the parts of the training images that most strongly matched each set of weights. ’
-
-(사진)
+![image](https://user-images.githubusercontent.com/89024993/232201289-1231a53d-bb3b-4dfb-ad15-8b9e5ef65a1f.png)
 
 - For layer 1
-  - the model has discovered weights that represent diagonal, horizontal, and vertical edges, as well as various gradients.
-  - Computer Vision의 기본 구성 요소가 됨
+  - 모델은 대각선, 수평선, 수직선, 다양한 경사도 들을 나타내는 가중치를 발견함
+  - 이 요소들은 Computer Vision의 기본 구성 요소가 됨
     - 사람의 눈의 시각 매커니즘과 매우 동일
-    - 손으로 작성된 컴퓨터 비전 특징과도 유사
+    - 손으로 작성된 컴퓨터 비전 프로그램 특징과도 유사
 
-(사진)
+![image](https://user-images.githubusercontent.com/89024993/232201287-137dd83b-e10a-469a-ac9f-e329f17b9d4d.png)
 
 - For layer 2
-  - there are nine examples of weight reconstructions for each of the features found by the model
-  - the model has learned to create feature detectors that look for corners, repeating lines, circles, and other simple patterns
-  - These are built from the basic building blocks developed in the first layer.
+  - 모델은 모서리 부분, 반복되는 선, 원형 모양, 간단한 패턴등을 탐지하도록 학습됨
+  - 위 요소들은 첫번째 layer의 구성 요소로부터 만들어졌음
     - For each of these, the righthand side of the picture shows small patches from actual images that these features most closely match.
     - For instance, the particular pattern in row 2, column 1 matches the gradients and textures associated with sunsets.
 
-(사진)
+![image](https://user-images.githubusercontent.com/89024993/232201282-12787298-c5df-4caf-aae1-652c32ae5bf4.png)
 
 - For layer 3
-  - righthand side of this picture, the features are now able to identify and match with higher-level semantic components, such as car wheels, text, an flower petals
-  - Using these components, layers 4 and 5 can identify even higher-level concepts
+  - 오른쪽의 사진에서, 모델이 학습한 특징들은 고수준의 구조적인 구성요소(자동차, 글자, 꽃잎 등)들과 매치됨을 알 수 있음
+  - 이 요소들을 활용하여 layers 4, 5는 더욱 고수준의 개념들을 탐지하고 학습할 수 있음
 
-(사진)
+![image](https://user-images.githubusercontent.com/89024993/232201267-25de30c4-fc82-4391-83c0-3edd5138f818.png)
 
 - 위 연구는 5개의 Layer로 이루어진 `AlexNet`이라는 오래된 모델을 사용
 - 수백개의 layer로 이루어진 Neural Network의 경우 **훨씬 더 풍성한 특징**들을 모델들이 구성할 수 있을 것임
@@ -265,3 +266,37 @@ the larger section at the bottom shows the parts of the training images that mos
   - 여기에 개와 고양이 분류 문제를 특화시킴
 
 - 일반적으로, pretrained model은 다른 여러가지 작업들에도 특화될 수 있음
+
+### 8. 이미지가 '아닌' 작업도 수행할 수 있는 Image Recognizer
+
+- 많은 것들을 image 형식으로 표현한다면 image recognizer를 적용할 수 있다
+
+- 소리 탐지 모델
+  - [Audio Classification with fastai library](https://etown.medium.com/great-results-on-audio-classification-with-fastai-library-ccaf906c5f52)
+- 시계열 자료를 이미지로 변환하여 모델에 학습
+  - Gramian Angular Difference Field(GADF) 방식 활용
+- 부정행위 탐지 모델
+  - [Catching the Fraudster with Behavior Biometrics](https://www.splunk.com/en_us/blog/security/deep-learning-with-splunk-and-tensorflow-for-security-catching-the-fraudster-in-neural-networks-with-behavioral-biometrics.html)
+- 악성소프트웨어 탐지 모델
+  - [Malware Classification with Deep Convolutional Neural Networks](https://ieeexplore.ieee.org/abstract/document/8328749)
+
+> 1. 데이터를 이미지로 표현해 보는 것은 좋은 insight를 제공한다!
+> 2. 사람의 눈으로 이미지의 특징을 포착할 수 있다면, DL 모델도 그 특징을 찾을 수 있다!
+
+### 9. 전문 용어 모아보기
+
+- Label : 예측하려고 하는 데이터
+- Architecture : 적합(fit)하려고 하는 모델의 탬플릿(template) / 입력 데이터와 파라미터를 전달해주려고 하는 실제적인 수학적 함수
+- Model : 특정 파라미터의 설정값과 아키텍쳐의 조합
+- Parameters : 모델이 할 수 있는 task를 변경하는 모델 내부의 값들, 모델이 학습하는 동안 계속 갱신됨
+- Fit : 입력 데이터를 target label과 맞는 지 확인하면서 모델의 파라미터를 갱신하는 것
+- Train : (Fit의 동의어)
+- Pretrained model : 대규모 데이터셋을 이용해 이미 학습된 모델, 파인 튜닝이 필요함
+- Fine-tune : 다른 task 수행을 위해 pretrained model을 갱신하는 것
+- Epoch : 입력 데이터를 완전히 한 번 훑는 것
+- Loss : 학습 과정에서 모델이 얼마나 좋은지 측정하는 것, SGD를 통해 학습되는 과정에서 채택됨
+- Metric : 학습된 모델이 Validation set을 사용했을 때 얼마나 좋은지 측정하는 것, 사람에게 정보제공을 위해 채택됨
+- Validation set : 학습 데이터에서 채택된 일부분의 데이터셋, 오직 모델의 성능 측정을 위해서만 사용
+- Training set : 모델을 적합시키는데 사용되는 데이터셋, validation dataset을 전혀 포함하고 있지 않아야 함
+- Overfitting : 학습되지 않은 데티어에도 잘 적용되는 일반화된 특징이 아닌, 입력 데이터의 지나치게 구체적인 특징까지 기억하도록 모델을 학습시키는 것
+- CNN : CV task를 수행하는데 좋은 성능을 보이는 신경망의 한 종류. Convolutional Neural Network
