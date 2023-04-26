@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 경사하강법 파헤치기(Gradient Descent)
+title: 경사하강법(Gradient Descent) 파헤치기
 categories: 
   - deeplearning
 ---
@@ -162,3 +162,13 @@ $$
 #### 참고 사항
 
 - 가중치가 업데이트될 때 **<u>진동폭을 최대한 작게 만들어주는 것</u>** 또한 옵티마이저를 설정할 때 중요한 고려사항 중 하나
+
+
+
+---
+
+
+
+reference
+
+- [머신러닝/딥러닝 공부 블로그](https://yhyun225.tistory.com/5)
