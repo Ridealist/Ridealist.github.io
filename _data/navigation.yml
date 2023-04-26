@@ -20,10 +20,12 @@ main:
 # [권장]
 # 1. CSS 적용 문제로 children 깊이는 2까지만 하는것을 권장. 즉, children의 children까지만.
 sidebar-category:
-  - title: "Deep Learning"
+  - title: "Fast AI"
     url: "/dl4coders/"
   - title: "Data Science"
     url: "/datascience/"
+  - title: "Deep Learning"
+    url: "/deeplearning/"
   - title: "Java"
     url: "/java/"
   - title: "OOP"
