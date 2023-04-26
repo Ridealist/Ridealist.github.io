@@ -57,7 +57,7 @@ categories:
 - 전체 데이터를 모두 한 번에 처리하기 때문에, 메모리가 가장 많이 필요하다.
 - 항상 같은 데이터 (전체 데이터)에 대해 경사를 구하기 때문에, 수렴이 안정적이다. (아래 그림 참고)
 - 단점은 이전 포스팅에서 언급한 4가지
-	- (경사하강법 파헤치기)[https://ridealist.github.io/deeplearning/gradient-descent-1/]
+	- [경사하강법 파헤치기](https://ridealist.github.io/deeplearning/gradient-descent-1/)
 
 
 ![img](https://blog.kakaocdn.net/dn/xzcf3/btqEuYhYtuF/jfMqBQlOKTq94H15yADKrK/img.png)
@@ -157,6 +157,6 @@ categories:
 
 reference
 
-- (머신러닝/딥러닝 공부)[https://yhyun225.tistory.com/7]
+- [머신러닝/딥러닝 공부](https://yhyun225.tistory.com/7)
 
-- (컴퓨터와 수학, 몽상 조금)[https://skyil.tistory.com/68]
+- [컴퓨터와 수학, 몽상 조금](https://skyil.tistory.com/68)
