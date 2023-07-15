@@ -7,7 +7,6 @@ categories:
 ---
 
 
-
 이 포스팅과 앞으로 이어질 내용은 Udacity의 'Human-Computer Interaction' 강의를 정리한 것입니다.
 
 [강의 링크](https://www.udacity.com/course/human-computer-interaction--ud400)
