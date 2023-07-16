@@ -1,7 +1,7 @@
 # main links
-main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+# main:
+#   - title: "Quick-Start Guide"
+#     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
@@ -22,6 +22,8 @@ main:
 sidebar-category:
   - title: "HCI"
     url: "/hci/"
+  - title: "LLM"
+    url: "/llm/"
   - title: "Fast AI"
     url: "/dl4coders/"
   - title: "Data Science"
