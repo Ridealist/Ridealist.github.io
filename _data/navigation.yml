@@ -30,8 +30,6 @@ sidebar-category:
     url: "/datascience/"
   - title: "Deep Learning"
     url: "/deeplearning/"
-  - title: "Java"
-    url: "/java/"
   - title: "OOP"
     url: "/oop/"
   - title: "Design Pattern"
