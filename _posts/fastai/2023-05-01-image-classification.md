@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: Ch5. Image Classification
+title: '[DL4C] Ch5. Image Classification'
 categories: 
   - dl4coders
 ---

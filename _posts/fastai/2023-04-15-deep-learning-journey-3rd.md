@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: Ch1. Your Deep Learning Journey(3)
+title: '[DL4C] Ch1. Your Deep Learning Journey(3)'
 categories: 
   - dl4coders
 ---

@@ -1,10 +1,27 @@
 ---
 published: true
 layout: posts
-title: Ch1. Your Deep Learning Journey(1)
+title: '[DL4C] Ch1. Your Deep Learning Journey(1)'
 categories: 
   - dl4coders
 ---
+
+## Preview(여는 글)
+
+이 포스팅과 앞으로 이어질 내용은 [Fast AI](https://www.fast.ai/)의 'Deep Learning for Coders with fastai & PyTorch' 교재 및 'Practical Deep Learning for Coders' 코스를 정리한 것입니다.
+
+![textbook](https://course.fast.ai/images/book.png)
+
+- [교재](https://www.amazon.com/Deep-Learning-Coders-fastai-PyTorch/dp/1492045527)
+- [Course 링크](https://course.fast.ai/)
+
+YouTube 강의도 있으니 참고하셔도 좋습니다:)
+
+![YouTube 강의](https://i.ytimg.com/vi/0oyCUWLL_fU/maxresdefault.jpg)
+
+- [강의 링크](https://www.youtube.com/watch?v=0oyCUWLL_fU&ab_channel=freeCodeCamp.org)
+
+
 
 ## Deep Learning If For Everyone
 

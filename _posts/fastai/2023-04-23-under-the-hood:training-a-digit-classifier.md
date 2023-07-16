@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: Ch4. Under the Hood, Training a Digit Classifier(1)
+title: '[DL4C] Ch4. Under the Hood, Training a Digit Classifier(1)'
 categories: 
   - dl4coders
 ---
