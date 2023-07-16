@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: "[HCI_L1] Intoduction to HCI"
+title: "[HCI] L1. Intoduction to HCI"
 categories: 
   - hci
 ---
