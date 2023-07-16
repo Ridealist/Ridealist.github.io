@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: Ch7. 함께 모으기
+title: '[객체지향의 사실과 오해] Ch7. 함께 모으기'
 categories: 
   - oop
 toc: true

@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: Ch1. 협력하는 객체들의 공동체
+title: '[객체지향의 사실과 오해] Ch1. 협력하는 객체들의 공동체'
 categories: 
   - oop
 toc: true

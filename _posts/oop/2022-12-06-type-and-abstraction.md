@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: Ch3. 타입과 추상화
+title: '[객체지향의 사실과 오해] Ch3. 타입과 추상화'
 categories: 
   - oop
 toc: true
