@@ -91,11 +91,6 @@ learn.fine_tune(1)
 ![image](../../assets/img/스크린샷-2023-04-13-4.png)
 
 
-- 머신러닝의 학습 과정 Overview
-
-![image](../../assets/img/스크린샷-2023-04-13-5.png)
-
-
 ### 4. 신경망이란? Neural Network
 
 > 매우 유연해서 가중치만 변경할 경우 어떤 문제에도 적용할 수 있는 `함수`가 없을까?
@@ -148,7 +143,7 @@ learn.fine_tune(1)
 - 성능(performance)의 측정 = 손실(loss)
 - 손실은 '예측값'과 '올바른 labels'에 둘다 영향을 받음
 
-![image](/assets/img/스크린샷 2023-04-14 오후 9.55.52 1.png)
+![image](../../assets/img/스크린샷-2023-04-13-5.png)
 
 ### 6. 머신 러닝의 한계
 
