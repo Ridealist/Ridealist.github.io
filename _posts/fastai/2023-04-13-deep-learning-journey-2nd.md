@@ -46,7 +46,7 @@ learn.fine_tune(1)
 
 전동적 프로그래밍(연역적 방법) vs. 머신러닝 프로그래밍(귀납적 방법)
 
-![image](https://user-images.githubusercontent.com/89024993/232101507-bfe93f34-3ca2-40c7-b33c-5e240e2ee158.png)
+![image](../../assets/img/스크린샷-2023-04-13-1.png)
 
 "Artificial Intelligence: A Frontier of Automation" - 'Arthur Samuel' at IBM
 
@@ -59,7 +59,7 @@ learn.fine_tune(1)
 3. 결과를 테스트 하기위해 "automatic means 자동화된 방법"이 요구됨
 4. 가중치 할당을 바꿔가면서 결과를 향상시키기 위한 "mechanism 방법론"이 필요함
 
-![image](https://user-images.githubusercontent.com/89024993/232101504-30f0f5cc-4f0a-4bb9-89b0-775ec794a65f.png)
+![image](../../assets/img/스크린샷-2023-04-13-2.png)
 
 - weight
   - 가중치도 `변수`
@@ -78,7 +78,7 @@ learn.fine_tune(1)
   - 가중치에 대한 최적화를 자동적으로 하게 하는 방법론
   - 실제 수행능력에 근거해 자동화된 방법으로 최적화 반복 = Learning 학습
 
-![image](https://user-images.githubusercontent.com/89024993/232101500-3323ed2d-3918-4f0c-8c63-c10ba9228e10.png)
+![image](../../assets/img/스크린샷-2023-04-13-3.png)
 
 - 결과(result)와 모델의 수행능력(performance)의 차이
 - 모델이 학습 되었다면 weight 가중치는 모델의 일부로써 취급 가능
@@ -88,7 +88,14 @@ learn.fine_tune(1)
 결론적으로...
   - **<u>학습된 모델은 마치 전통적 프로그램과 똑같이 취급될 수 있다!</u>**
 
-![image](https://user-images.githubusercontent.com/89024993/232101538-d7fef220-58c5-401e-afdb-8269334ecc69.png)
+![image](../../assets/img/스크린샷-2023-04-13-4.png)
+
+
+
+- 머신러닝의 학습 과정 Overview
+
+![image](../../assets/img/스크린샷-2023-04-13-5.png)
+
 
 ### 4. 신경망이란? Neural Network
 
@@ -110,6 +117,7 @@ learn.fine_tune(1)
   - 매우 유연하다는 점에서 특별함
   - 올바른 가중치만 찾는다면 엄청나게 넓은 범위의 문제에 적용될 수 있다!
   - feat. SGD로 가중치를 찾는 과정을 자동화
+
 
 ---
 
