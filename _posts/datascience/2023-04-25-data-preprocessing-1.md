@@ -6,6 +6,8 @@ categories:
   - datascience
 ---
 
+## Overview
+
 
 1. 연속형, 범주형 처리
     - continuous type
@@ -22,6 +24,8 @@ categories:
     - outlier 정의
     - 정성적인 측면
     - 성능적인 측면
+
+
 
 ## 데이터 전처리란
 
