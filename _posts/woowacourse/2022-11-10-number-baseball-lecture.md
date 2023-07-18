@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 숫자 야구 with 자바 기초_강의 내용 정리
+title: '[우테코] 숫자 야구 with 자바 기초_강의 내용 정리'
 categories: 
   - woowacourse
 toc : false

@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 우테코 프리코스 미션 규칙
+title: '[우테코] 우테코 프리코스 미션 규칙'
 categories: 
   - woowacourse
 toc: true

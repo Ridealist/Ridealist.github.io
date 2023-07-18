@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 1주차 과제 피드백 정리
+title: '[우테코] 1주차 과제 피드백 정리'
 categories: 
   - woowacourse
 toc: true

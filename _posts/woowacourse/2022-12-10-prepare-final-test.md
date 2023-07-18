@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 최종 코딩테스트 대비 정리 자료
+title: '[우테코] 최종 코딩테스트 대비 정리 자료'
 categories: 
   - woowacourse
 toc: true

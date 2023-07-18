@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 3주차 회고록 + 코드 리뷰 스터디 피드백 정리
+title: '[우테코] 3주차 회고록 + 코드 리뷰 스터디 피드백 정리'
 categories: 
   - woowacourse
 toc: true

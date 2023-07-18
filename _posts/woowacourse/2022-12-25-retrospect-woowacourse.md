@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 최종 코딩테스트 및 프리코스 마무리 후기
+title: '[우테코] 최종 코딩테스트 및 프리코스 마무리 후기'
 categories: 
   - woowacourse
 toc: true

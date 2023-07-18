@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 2주차 회고록 + 과제 피드백 정리
+title: '[우테코] 2주차 회고록 + 과제 피드백 정리'
 categories: 
   - woowacourse
 toc: true

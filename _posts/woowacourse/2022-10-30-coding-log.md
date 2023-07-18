@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 프리코스1_온보딩 미션 진행 과정 기록
+title: '[우테코] 프리코스1_온보딩 미션 진행 과정 기록'
 categories: 
   - woowacourse
 ---
