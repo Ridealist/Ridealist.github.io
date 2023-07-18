@@ -1,7 +1,7 @@
 ---
 published: true
 layout: posts
-title: 3-1. 데이터 전처리(1)
+title: '[쇼핑데이터 ML] 3-1. 데이터 전처리(1)'
 categories: 
   - datascience
 ---
