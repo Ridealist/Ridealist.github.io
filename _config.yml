@@ -244,7 +244,7 @@ whitelist:
 # TOC Settings
 toc:
  min_level: 1
- max_level: 3
+ max_level: 4
  list_class: toc
  list_class: toc__list
  sublist_class: toc__sublist
@@ -295,7 +295,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: false
