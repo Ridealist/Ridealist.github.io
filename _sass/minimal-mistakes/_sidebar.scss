@@ -105,6 +105,13 @@
   }
 }
 
+.sidebar__top {
+  position: fixed;
+  bottom: 3em;
+  right: 4em;
+  z-index: 10;
+}
+
 .splash .sidebar__right {
   @include breakpoint($large) {
     position: relative;

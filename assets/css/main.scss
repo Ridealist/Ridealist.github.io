@@ -23,4 +23,11 @@ html {
     @include breakpoint($x-large) {
         font-size: 18px; // change to whatever
     }
-    }
+}
+
+code {
+    background-color: rgb(230, 230, 230);
+    border: 1px solid #C1C1C1;
+    border-radius: 3px;
+    padding: 2px;
+}
