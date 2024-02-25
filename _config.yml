@@ -107,13 +107,13 @@ analytics:
 author:
   name             : "Junbo Koh"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **ongoing** learner, practitioner and researcher."
+  bio              : "I am an **ongoing** learner, practitioner and researcher. \n\n Currently Master's student, educational technology, Seoul National University"
   location         : "Seoul, South Korea"
-  email            :
+  email            : "gtkobo92@snu.ac.kr"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "cjsn92@gmail.com"
+      # url: "gtkobo92@snu.ac.kr"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
