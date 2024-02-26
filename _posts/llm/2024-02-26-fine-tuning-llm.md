@@ -66,7 +66,7 @@ You have a few options for running fine-tuning notebooks:
 
 (FFT-학습 스크립트)
 
-```bash
+```shell
 #!/bin/bash
 
 deepspeed /workspace/LLaVA/llava/train/train_mem.py \
@@ -110,7 +110,7 @@ deepspeed /workspace/LLaVA/llava/train/train_mem.py \
 
 (LoRA 학습 스크립트)
 
-```bash
+```shell
 #!/bin/bash
 
 # # Assign paths to variables
@@ -160,3 +160,16 @@ deepspeed ./llava/train/train_mem.py \
     --report_to wandb
 
 ```
+
+
+
+## 3. 학습 관련 필요한 HuggingFace 함수들
+
+- 관련 HuggingFace 게시물
+	- https://huggingface.co/docs/transformers/v4.15.0/en/model_sharing#use-your-terminal-and-git
+- 파일 하나 다운로드
+	- [hf_hub_download](https://huggingface.co/docs/huggingface_hub/v0.20.3/en/package_reference/file_download#huggingface_hub.hf_hub_download)
+
+- 전체 Repo 다운로드
+	- [snapshot_download](https://huggingface.co/docs/huggingface_hub/v0.20.3/en/package_reference/file_download#huggingface_hub.snapshot_download)
+
