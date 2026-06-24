@@ -1,0 +1,33 @@
+# Homepage profile data for the Blog MVP redesign.
+# Keep this file as the single source for the new homepage profile panel.
+name: "Junbo Koh"
+headline: "Ongoing learner, practitioner, and researcher"
+affiliation: "Educational Technology, Seoul National University"
+location: "Seoul, South Korea"
+email: "gtkobo92@snu.ac.kr"
+
+# No profile image is committed yet. The homepage layout should render without
+# an avatar when this value is blank.
+avatar:
+avatar_alt: "Junbo Koh"
+
+bio:
+  - "I am an ongoing learner, practitioner, and researcher."
+  - "Currently Master's student, Educational Technology, Seoul National University."
+
+links:
+  - label: "Email"
+    icon: "envelope"
+    url: "mailto:gtkobo92@snu.ac.kr"
+  - label: "GitHub"
+    icon: "github"
+    url: "https://github.com/Ridealist/"
+  - label: "Twitter/X"
+    icon: "x-twitter"
+    url: "https://twitter.com/Junbo_Koh"
+
+# Optional links are intentionally omitted until real URLs are available.
+optional_links:
+  cv:
+  google_scholar:
+  linkedin:
