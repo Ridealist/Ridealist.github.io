@@ -21,15 +21,18 @@ links:
   - label: "Email"
     icon: "envelope"
     url: "mailto:gtkobo92@snu.ac.kr"
+  - label: "Google Scholar"
+    icon: "google-scholar"
+    url: "https://scholar.google.com/citations?user=2hDR1lgAAAAJ&hl=en"
+  - label: "CV"
+    icon: "cv"
+    url: "https://docs.google.com/document/d/1PGgfaXFf4T5BaNPduZi3TPmRhdUfYt5ULsStewoAdBs/edit?usp=sharing"
   - label: "GitHub"
     icon: "github"
     url: "https://github.com/Ridealist/"
-  - label: "Twitter/X"
-    icon: "x-twitter"
-    url: "https://twitter.com/Junbo_Koh"
+  - label: "LinkedIn"
+    icon: "linkedin"
+    url: "https://www.linkedin.com/in/junbokoh92/"
 
 # Optional links are intentionally omitted until real URLs are available.
 optional_links:
-  cv:
-  google_scholar:
-  linkedin:
