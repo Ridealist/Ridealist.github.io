@@ -3,13 +3,7 @@ layout: homepage
 title: "Home"
 ---
 
-<h2>News</h2>
-
-<ul class="homepage-news-list">
-  <li><span class="homepage-news-date">2026.06</span> Reorganizing this site into an academic profile and learning archive.</li>
-  <li><span class="homepage-news-date">2024.03</span> Added notes on <a href="{{ '/isd/problem-analysis/' | relative_url }}">problem analysis</a> and instructional design foundations.</li>
-  <li><span class="homepage-news-date">2024.02</span> Added notes on <a href="{{ '/llm/fine-tuning-llm/' | relative_url }}">fine-tuning LLMs</a>.</li>
-</ul>
+{% include homepage-news.html limit=5 %}
 
 <h2>About Me</h2>
 
@@ -28,6 +22,8 @@ title: "Home"
 </ul>
 
 <p>I am interested in the intersection of learning sciences, educational technology, and human-centered AI. More specifically, I want to study how learners interact with intelligent tools, how those tools shape learning processes, and how design decisions can make AI systems more explainable, useful, and accountable in educational contexts.</p>
+
+{% include homepage-publications.html %}
 
 <h2>Writing / Notes</h2>
 

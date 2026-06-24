@@ -1,0 +1,20 @@
+# Homepage publications.
+#
+# Add real publication entries as they become available. The homepage include
+# renders an empty state when these lists are empty, so build output stays
+# stable before publication metadata is finalized.
+#
+# Example entry:
+# - title: "Paper title"
+#   authors: "Junbo Koh, Coauthor A, Coauthor B"
+#   venue: "CHI 2026"
+#   venue_short: "CHI"
+#   year: 2026
+#   image: "/assets/img/publications/example.png"
+#   note: "Honorable Mention"
+#   links:
+#     - label: "PDF"
+#       url: "https://example.com/paper.pdf"
+
+selected: []
+all: []
