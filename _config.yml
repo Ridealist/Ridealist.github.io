@@ -95,7 +95,9 @@ social:
   name                   : "Junbo Koh" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
     - "https://github.com/Ridealist/"
-    - "https://twitter.com/Junbo_Koh"
+    - "https://www.linkedin.com/in/junbokoh92/"
+    - "https://scholar.google.com/citations?user=2hDR1lgAAAAJ&hl=en"
+    - "https://docs.google.com/document/d/1PGgfaXFf4T5BaNPduZi3TPmRhdUfYt5ULsStewoAdBs/edit?usp=sharing"
 
 # Analytics
 analytics:
@@ -113,24 +115,18 @@ author:
   location         : "Seoul, South Korea"
   email            : "gtkobo92@snu.ac.kr"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:gtkobo92@snu.ac.kr"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/Junbo_Koh"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/"
+    - label: "Google Scholar"
+      icon: "ai ai-google-scholar"
+      url: "https://scholar.google.com/citations?user=2hDR1lgAAAAJ&hl=en"
+    - label: "CV"
+      icon: "ai ai-cv"
+      url: "https://docs.google.com/document/d/1PGgfaXFf4T5BaNPduZi3TPmRhdUfYt5ULsStewoAdBs/edit?usp=sharing"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/Ridealist/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/junbokoh92/"
 
 # Site Footer
 footer:
