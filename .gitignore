@@ -2,6 +2,9 @@
 *~
 *.sw[p_]
 
+# IntelliJ IDEA
+*.idea
+
 # Sublime Text
 *.sublime-project
 *.sublime-workspace
@@ -30,3 +33,6 @@ _site
 
 # IPython / notebook files
 *.ipynb
+
+# Ref github repos
+/references
