@@ -30,3 +30,6 @@ _site
 
 # IPython / notebook files
 *.ipynb
+
+# Ref github repos
+/references
