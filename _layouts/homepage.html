@@ -18,6 +18,7 @@
   <head>
     {% include head.html locale=locale %}
     {% include head/custom.html %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ '/assets/css/homepage.css' | relative_url }}">
   </head>
 
@@ -80,9 +81,9 @@
                   {% when 'linkedin' %}
                     {% assign icon_class = 'fab fa-linkedin' %}
                   {% when 'google-scholar' %}
-                    {% assign icon_class = 'fas fa-graduation-cap' %}
+                    {% assign icon_class = 'ai ai-google-scholar' %}
                   {% when 'cv' %}
-                    {% assign icon_class = 'fas fa-file-alt' %}
+                    {% assign icon_class = 'ai ai-cv' %}
                   {% else %}
                     {% assign icon_class = 'fas fa-link' %}
                   {% endcase %}
