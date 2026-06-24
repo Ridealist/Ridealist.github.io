@@ -19,8 +19,8 @@ locale                   : "ko-KR"
 title                    : "Ridi's TIL"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your"
-description              : "An amazing website."
+name                     : "Junbo Koh"
+description              : "Junbo Koh's learning notes and research-oriented TIL blog."
 url                      : "https://Ridealist.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "Ridealist/Ridealist.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -91,9 +91,11 @@ og_image                 : # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : "Person" # Person or Organization (defaults to Person)
+  name                   : "Junbo Koh" # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+    - "https://github.com/Ridealist/"
+    - "https://twitter.com/Junbo_Koh"
 
 # Analytics
 analytics:
@@ -113,7 +115,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "gtkobo92@snu.ac.kr"
+      url: "mailto:gtkobo92@snu.ac.kr"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
