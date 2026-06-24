@@ -6,10 +6,11 @@
   {%- assign profile = site.author -%}
 {%- endunless -%}
 {%- assign profile_name = profile.name | default: site.name | default: site.title -%}
-{%- assign profile_headline = profile.headline | default: site.subtitle -%}
+{%- assign profile_position = profile.position | default: profile.headline | default: site.subtitle -%}
 {%- assign profile_avatar = profile.avatar -%}
 {%- assign profile_avatar_alt = profile.avatar_alt | default: profile_name -%}
 {%- assign profile_email = profile.email -%}
+{%- assign profile_affiliation_url = profile.affiliation_url | default: profile.affiliation_link -%}
 
 <!doctype html>
 {% include copyright.html %}
@@ -37,12 +38,18 @@
 
         <h1 class="homepage-name">{{ profile_name }}</h1>
 
-        {% if profile_headline %}
-          <p class="homepage-headline">{{ profile_headline }}</p>
+        {% if profile_position %}
+          <p class="homepage-position">{{ profile_position }}</p>
         {% endif %}
 
         {% if profile.affiliation %}
-          <p class="homepage-affiliation">{{ profile.affiliation }}</p>
+          <p class="homepage-affiliation">
+            {% if profile_affiliation_url %}
+              <a href="{{ profile_affiliation_url }}">{{ profile.affiliation }}</a>
+            {% else %}
+              {{ profile.affiliation }}
+            {% endif %}
+          </p>
         {% endif %}
 
         {% if profile.location %}
@@ -91,6 +98,10 @@
 
       <main id="main" class="homepage-content" role="main">
         {{ content }}
+
+        <footer class="homepage-footer">
+          <small>&copy; {{ site.time | date: "%Y" }} {{ profile_name }}. Powered by Jekyll.</small>
+        </footer>
       </main>
     </div>
 

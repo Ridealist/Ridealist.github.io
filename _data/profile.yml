@@ -1,8 +1,10 @@
 # Homepage profile data for the Blog MVP redesign.
 # Keep this file as the single source for the new homepage profile panel.
 name: "Junbo Koh"
+position: "Master's Student"
 headline: "Ongoing learner, practitioner, and researcher"
 affiliation: "Educational Technology, Seoul National University"
+affiliation_url:
 location: "Seoul, South Korea"
 email: "gtkobo92@snu.ac.kr"
 
