@@ -116,6 +116,26 @@ conferences:
       - label: "Conference"
         url: "https://www.aect.org/events/event-description?CalendarEventKey=440d8814-367b-407a-8a2a-0196022eecc4&Home=%2Fhome"
 
+  - title: "Development of a Teacher Competency Model for AI Digital Textbook-Integrated Instruction"
+    authors: "Kungwook Jeong, Daeun Jeong, Hyejin Lee, and **Junbo Koh**\\*"
+    tags: [edutech]
+    venue: "Journal of Educational Technology, 41(4), 1643–1682 (2025)"
+    note: "KCI, Corresponding author"
+    url: "https://doi.org/10.17232/KSET.41.4.1643"
+    links:
+      - label: "DOI"
+        url: "https://doi.org/10.17232/KSET.41.4.1643"
+
+  - title: "Development of a Prototype Simulation-Based AI System to Support Physics Inquiry Learning"
+    authors: "**Junbo Koh**, Jiwoong Park, Chanhui Kim, Yoomin Kim, and Sunyoung Keum"
+    tags: [edutech]
+    venue: "The Journal of Educational Information and Media, 31(2), 493–517 (2025)"
+    note: "KCI"
+    url: "https://doi.org/10.15833/KAFEIAM.31.2.493"
+    links:
+      - label: "DOI"
+        url: "https://doi.org/10.15833/KAFEIAM.31.2.493"
+
   # 2024
   - title: "I See You: Teacher Analytics with GPT-4 Vision-Powered Observational Assessment"
     authors: "Unggi Lee, Yeil Jeong, **Junbo Koh**, Gyuri Byun, Yunseo Lee, Hyunwoong Lee, Seunmin Eun, Jewoong Moon, Cheolil Lim, and Hyeoncheol Kim"
