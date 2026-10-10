@@ -34,6 +34,39 @@
     });
     if (headings.length > 0) toc.hidden = false;
   }
+  // Home news: "Show more" reveals `data-step` more items per click; "Show less" folds back
+  var news = document.querySelector("[data-news]");
+  var newsActions = news && news.querySelector(".news-actions");
+  if (newsActions) {
+    var step = parseInt(newsActions.getAttribute("data-step"), 10);
+    var moreButton = newsActions.querySelector("[data-news-more]");
+    var lessButton = newsActions.querySelector("[data-news-less]");
+    var newsSep = newsActions.querySelector(".news-sep");
+    var extras = Array.prototype.slice.call(news.querySelectorAll("[data-news-extra]"));
+    var updateNews = function () {
+      var remaining = extras.filter(function (row) { return row.hidden; }).length;
+      var expanded = remaining < extras.length;
+      moreButton.hidden = remaining === 0;
+      moreButton.textContent = "Show " + Math.min(step, remaining) + " more ↓";
+      lessButton.hidden = !expanded;
+      newsSep.hidden = moreButton.hidden || lessButton.hidden;
+    };
+    moreButton.addEventListener("click", function () {
+      extras.filter(function (row) { return row.hidden; }).slice(0, step).forEach(function (row) {
+        row.hidden = false;
+      });
+      updateNews();
+    });
+    lessButton.addEventListener("click", function () {
+      extras.forEach(function (row) { row.hidden = true; });
+      updateNews();
+      moreButton.focus({ preventScroll: true });
+      // The list just got shorter; bring the News heading back into view if it scrolled off
+      var heading = news.previousElementSibling || news;
+      if (heading.getBoundingClientRect().top < 0) heading.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
   // Chip filters driven by the URL hash: blog categories (/blog/#llm) and publication topics (/publications/#nlp)
   // With `limit`, the unfiltered list shows only the first `limit` items until the `more` button is clicked.
   var setupFilter = function (chips, groupSelector, limit, more) {

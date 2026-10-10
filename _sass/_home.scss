@@ -20,8 +20,6 @@
 }
 
 .news {
-  max-height: 220px;
-  overflow-y: auto;
   margin-bottom: $spacing-unit;
 
   table {
@@ -43,6 +41,26 @@
 
   a {
     font-weight: 500;
+  }
+}
+
+.news-sep {
+  margin: 0 6px;
+  color: $grey-color;
+  font-size: $small-font-size;
+}
+
+.news-toggle {
+  padding: 0;
+  border: none;
+  background: none;
+  color: $grey-color;
+  font: inherit;
+  font-size: $small-font-size;
+  cursor: pointer;
+
+  &:hover {
+    color: $brand-color;
   }
 }
 

@@ -1,13 +1,16 @@
 {%- comment -%}
   News table, newest first. Items come from _data/news.yml.
+  Shows the first `news_limit` items. "Show more" reveals `news_limit` more per click;
+  "Show less" appears once anything is revealed and folds back to the first items.
   Usage: {% include news.html %}
 {%- endcomment -%}
 {%- assign news_items = site.data.news.items | sort: "date" | reverse -%}
+{%- assign news_limit = 5 -%}
 {%- if news_items.size > 0 %}
-<div class="news">
+<div class="news" data-news>
   <table>
     {%- for item in news_items %}
-      <tr>
+      <tr{% if forloop.index > news_limit %} data-news-extra hidden{% endif %}>
         <td class="news-date">{{ item.label | default: item.date | date: "%b %Y" }}</td>
         <td>
           {{ item.text | markdownify | remove: "<p>" | remove: "</p>" | strip }}
@@ -15,5 +18,13 @@
       </tr>
     {%- endfor %}
   </table>
+  {%- if news_items.size > news_limit %}
+  {%- assign news_more = news_items.size | minus: news_limit | at_most: news_limit %}
+  <div class="news-actions" data-step="{{ news_limit }}">
+    <button type="button" class="news-toggle" data-news-more>Show {{ news_more }} more ↓</button>
+    <span class="news-sep" hidden>·</span>
+    <button type="button" class="news-toggle" data-news-less hidden>Show less ↑</button>
+  </div>
+  {%- endif %}
 </div>
 {%- endif %}
