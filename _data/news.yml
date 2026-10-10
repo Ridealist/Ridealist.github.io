@@ -1,5 +1,69 @@
 # Home page news, shown newest first.
 # `text` supports Markdown, e.g. "Paper accepted to [CHI 2026](https://chi2026.acm.org/)!"
+# Only the month is shown; within a month, a later day is listed first.
 items:
-  - date: 2026-06-24
-    text: "Reorganized this site into an academic homepage."
+  - date: 2026-08-28
+    text: "ModumView, our real-time small group collaborative learning dashboard, won a Special Judges' Award at the Seoul Metropolitan Office of Education teacher-developer hackathon 🏆"
+
+  - date: 2026-06-28
+    text: "Attending AIED 2026 right here in Seoul! Presenting \"Peer and Tutor in One\" and demoing Slidecaster. Come say hi 👋"
+
+  - date: 2026-05-28
+    text: "Our demo \"Slidecaster\" is accepted to AIED 2026 Interactive Events 📄"
+
+  - date: 2026-05-27
+    text: "Started serving as an AI Digital Education Lead Teacher for the Seoul Metropolitan Office of Education 🏫"
+
+  - date: 2026-04-28
+    text: "Our poster \"Agent for Agency\" is presented at LAK26 in Bergen, Norway 🇳🇴"
+
+  - date: 2026-03-28
+    text: "\"Peer and Tutor in One\" is accepted to AIED 2026. See you in Seoul! 📄"
+
+  - date: 2026-03-27
+    text: "The proposal I wrote got our school selected as an \"AI & Digital-Based Leading School\" with a $24K grant. I'm leading the one-year program as the PI! 🏫"
+
+  - date: 2026-02-28
+    text: "Back in the classroom! I've returned to teaching, now at Seoul Myogok Elementary School 🏫"
+
+  - date: 2026-02-27
+    text: "Finished my M.A. in Educational Technology & Integrated Major in Applied Data Science at SNU 🎓"
+
+  - date: 2026-02-26
+    text: "Received the Junior Scholar Fellowship from BK21 FOUR at SNU 🏆"
+
+  - date: 2026-01-28
+    text: "Two new preprints are up on arXiv: \"OpenLearnLM Benchmark\" and \"Rewarding How Models Think Pedagogically\" 📄"
+
+  - date: 2025-12-28
+    text: "Our teacher competency model for AI digital textbook-integrated instruction is published in the Journal of Educational Technology, my first paper as corresponding author 📄"
+
+  - date: 2025-11-28
+    text: "Pedagogy-R1 is presented at CIKM 2025 in Seoul, Korea 🇰🇷"
+
+  - date: 2025-10-28
+    text: "Attending AECT 2025 in Las Vegas with two presentations: our physics inquiry AI system and a scoping review of AI education in Korean elementary schools 🇺🇸"
+
+  - date: 2025-06-28
+    text: "My first first-authored journal paper, on a simulation-based AI system for physics inquiry learning, is published in The Journal of Educational Information and Media 📄"
+
+  - date: 2025-06-27
+    text: "Received the Jr. Priming Award from BK21 FOUR at SNU 🏆"
+
+  - date: 2025-05-28
+    text: "Received the Graduate Student Learning Sciences Research Scholarship from the Learning Sciences Research Institute at SNU 🏆"
+
+  - date: 2025-03-28
+    text: "Our paper on a generative AI-enhanced simulation for pre-service teachers is published in Computers & Education 📄"
+
+  - date: 2024-10-28
+    text: "\"I See You: Teacher Analytics with GPT-4 Vision-powered Observational Assessment\" is published in Smart Learning Environments 📄"
+
+  - date: 2024-04-28
+    text: "\"DEBO, our ChatGPT-based debate partner\" is published in Educational Technology & Society 📄"
+
+  - date: 2024-03-28
+    text: "Started my M.A. in Educational Technology at SNU and joined the Learning Sciences Research Institute as a researcher 📚"
+
+  - date: 2023-12-28
+    text: "My first paper! \"Generative agent for teacher training\" is presented at the NeurIPS 2023 GAIED Workshop 📄"

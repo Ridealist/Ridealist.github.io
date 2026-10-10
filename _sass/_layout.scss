@@ -53,6 +53,9 @@
     &:hover,
     &.is-active {
       text-decoration: wavy underline $accent-color;
+      // Sit below descenders (g, p) and draw unbroken instead of skipping around them
+      text-underline-offset: 0.3em;
+      text-decoration-skip-ink: none;
     }
 
     &:not(:first-child) {
