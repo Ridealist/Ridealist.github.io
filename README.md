@@ -43,7 +43,7 @@ The top navigation is set in `_config.yml`. Pages appear in the order listed. `u
 
 ```yml
 title: "Junbo Koh"
-tagline: "EdTech @ SNU"   # shown next to the name
+# tagline: "EdTech @ SNU"   # shown next to the name
 
 header:
   pages:

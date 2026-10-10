@@ -4,8 +4,10 @@
 
   {%- if page.title and page.url != "/" -%}
     {%- assign page_title = page.title | append: " | " | append: site.title -%}
-  {%- else -%}
+  {%- elsif site.tagline -%}
     {%- assign page_title = site.title | append: " | " | append: site.tagline -%}
+  {%- else -%}
+    {%- assign page_title = site.title -%}
   {%- endif -%}
   {%- assign page_description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 -%}
   {%- assign page_image = page.og_image | default: site.og_image | default: site.data.profile.avatar -%}
