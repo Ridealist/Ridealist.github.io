@@ -3,7 +3,7 @@
 # Restart the server after editing it.
 
 title: "Junbo Koh"
-tagline: "EdTech @ SNU" # shown next to the name in the header
+# tagline: "EdTech @ SNU" # shown next to the name in the header
 description: "Junbo Koh's academic homepage: learning sciences, educational technology, and human-centered AI."
 url: "https://ridealist.github.io"
 baseurl: ""
