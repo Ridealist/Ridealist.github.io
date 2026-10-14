@@ -1,0 +1,15 @@
+{%- comment -%}
+  Outlined link buttons for a publication or talk. Usage: {% include publication-links.html links=item.links %}
+{%- endcomment -%}
+{%- assign has_links = false %}
+{%- for link in include.links %}{% if link.url %}{% assign has_links = true %}{% endif %}{% endfor %}
+{%- if has_links %}
+<div class="pub-links">
+  {%- for link in include.links %}
+    {%- if link.url %}
+      {%- if link.url contains "://" %}{% assign link_href = link.url %}{% else %}{% assign link_href = link.url | relative_url %}{% endif %}
+  <a href="{{ link_href }}" target="_blank" rel="noopener">{{ link.label }}</a>
+    {%- endif %}
+  {%- endfor %}
+</div>
+{%- endif %}
