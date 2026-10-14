@@ -35,3 +35,6 @@ _site
 
 # Ref github repos
 /references
+
+# Original papers, slides and posters (public copies live in assets/files/)
+/_publications/

@@ -4,28 +4,37 @@
 {%- assign pub = include.publication -%}
 {%- assign title_url = pub.url -%}
 <div class="pub-container"{% if pub.id %} id="{{ pub.id }}"{% endif %} data-categories="{{ pub.tags | join: ' ' }}">
-  {%- if pub.image %}
-  <div class="pub-teaser-image">
+  {%- if pub.image or pub.venue_short %}
+  <div class="pub-teaser{% unless pub.image %} pub-teaser--empty{% endunless %}">
+    {%- if pub.image %}
     <img src="{{ pub.image | relative_url }}" alt="" loading="lazy">
+    {%- endif %}
+    {%- if pub.venue_short %}
+    <abbr class="pub-badge" title="{{ pub.venue }}">{{ pub.venue_short }}</abbr>
+    {%- endif %}
   </div>
   {%- endif %}
   <div class="pub-contents">
     {%- if title_url %}
       {%- if title_url contains "://" %}{% assign title_href = title_url %}{% else %}{% assign title_href = title_url | relative_url %}{% endif %}
-      <a class="pub-title" href="{{ title_href }}" target="_blank" rel="noopener">{{ pub.title }}</a><br>
+    <a class="pub-title" href="{{ title_href }}" target="_blank" rel="noopener">{{ pub.title }}</a>
     {%- else %}
-      <span class="pub-title">{{ pub.title }}</span><br>
+    <span class="pub-title">{{ pub.title }}</span>
     {%- endif %}
-    <span class="pub-authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</span><br>
-    <span class="pub-meta">
-      {%- if pub.venue %}<span class="pub-venue">{{ pub.venue }}</span>{% endif -%}
-      {%- for link in pub.links %}
-        {%- if link.url %}
-          {%- if link.url contains "://" %}{% assign link_href = link.url %}{% else %}{% assign link_href = link.url | relative_url %}{% endif -%}
-          <span class="pub-sep">|</span><a href="{{ link_href }}" target="_blank" rel="noopener">{{ link.label }}</a>
-        {%- endif %}
-      {%- endfor -%}
-      {%- if pub.note %}<span class="pub-sep">|</span><span class="pub-note">{{ pub.note }}</span>{% endif -%}
-    </span>
+    <div class="pub-authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</div>
+    <div class="pub-meta">
+      {%- if pub.venue %}<em class="pub-venue">{{ pub.venue }}</em>{% endif -%}
+      {%- if pub.note %}<span class="pub-note">{{ pub.note }}</span>{% endif -%}
+    </div>
+    {%- include publication-links.html links=pub.links %}
+    {%- for talk in pub.presentations %}
+    <div class="pub-presentation">
+      <div class="pub-presentation-label">Presented at</div>
+      {%- if talk.venue %}
+      <div class="pub-meta"><em class="pub-venue">{{ talk.venue }}</em></div>
+      {%- endif %}
+      {%- include publication-links.html links=talk.links %}
+    </div>
+    {%- endfor %}
   </div>
 </div>
