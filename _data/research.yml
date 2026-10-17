@@ -17,7 +17,7 @@
 
 - id: "tblt-agent"
   title: "TBLT-Agent"
-  tagline: "Generative AI as a task interlocutor for task-based L2 learning"
+  tagline: "A Conversational AI System for Student–AI Collaboration in Task-Based Language Learning"
   links:
     - label: "Project Page"
       url: "https://ridealist.github.io/team-GSNU/en/"
@@ -25,10 +25,10 @@
 
 - id: "easyphysics"
   title: "EasyPhysics"
-  tagline: "Simulation-based AI peer and tutor for physics inquiry learning"
+  tagline: "A Simulation-Based Physics Inquiry Learning Environment with a Dual-Role Conversational Agent"
   publications: [bounded-agency-bjet, peer-tutor-aied26, physics-inquiry-kci]
 
 - id: "slidecaster"
   title: "Slidecaster"
-  tagline: "Human-AI co-authoring of pedagogically grounded micro-learning videos"
+  tagline: "A Human–AI Co-Authoring System for Korean Medicine Learning Content"
   publications: [slidecaster-aied26]
