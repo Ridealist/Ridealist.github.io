@@ -17,8 +17,8 @@ header:
   pages:
     - name: Home
       url: /
-    - name: Research
-      url: /research/
+    - name: Projects
+      url: /projects/
     - name: Publications
       url: /publications/
     # Blog is hidden for now; restore these two lines and remove blog.md/_posts from `exclude`

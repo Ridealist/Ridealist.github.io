@@ -1,12 +1,12 @@
-# Research page: one section per project, listed in the order written here.
+# Projects page: one section per project, listed in the order written here.
 # Papers are pulled from _data/publications.yml by their `id`, so each paper
 # is written once and shows on both pages.
 #
 # Example entry:
-# - id: "project-short-name"                         # anchor, link as /research/#project-short-name
+# - id: "project-short-name"                         # anchor, link as /projects/#project-short-name
 #   title: "Project name"
 #   tagline: "One sentence on what the project is"     # optional; shown under the title
-#   image: "/assets/img/research/example.webp"       # optional figure
+#   image: "/assets/img/projects/example.webp"       # optional figure
 #   summary: >-                                      # optional; Markdown
 #     One or two paragraphs about the project.
 #   video: "https://youtu.be/VIDEO_ID"               # optional demo; YouTube URL or "/assets/video/demo.mp4"
