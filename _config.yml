@@ -17,10 +17,13 @@ header:
   pages:
     - name: Home
       url: /
+    - name: Research
+      url: /research/
     - name: Publications
       url: /publications/
-    - name: Blog
-      url: /blog/
+    # Blog is hidden for now; restore these two lines and remove blog.md/_posts from `exclude`
+    # - name: Blog
+    #   url: /blog/
     - name: CV
       url: /cv/
 
@@ -81,5 +84,8 @@ exclude:
   - docs/
   - references/
   - vendor/
+  # Blog is hidden for now (files kept, not built)
+  - blog.md
+  - _posts/
   - "_posts/**/*.ipynb"
   - "_posts/.jekyll-cache"

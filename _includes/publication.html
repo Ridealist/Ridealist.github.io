@@ -1,13 +1,37 @@
 {%- comment -%}
   One publication row. Usage: {% include publication.html publication=item %}
+  Pass anchor=false to skip the row id, teaser=false to drop the teaser box (both used on the Research page).
+  Without an `image`, the teaser is a card with the journal or conference name.
 {%- endcomment -%}
 {%- assign pub = include.publication -%}
 {%- assign title_url = pub.url -%}
-<div class="pub-container"{% if pub.id %} id="{{ pub.id }}"{% endif %} data-categories="{{ pub.tags | join: ' ' }}">
-  {%- if pub.image or pub.venue_short %}
-  <div class="pub-teaser{% unless pub.image %} pub-teaser--empty{% endunless %}">
+<div class="pub-container"{% if pub.id and include.anchor != false %} id="{{ pub.id }}"{% endif %} data-categories="{{ pub.tags | join: ' ' }}">
+  {%- assign show_teaser = false %}
+  {%- if pub.image or pub.venue_short %}{% unless include.teaser == false %}{% assign show_teaser = true %}{% endunless %}{% endif %}
+  {%- if show_teaser %}
+  <div class="pub-teaser{% unless pub.image %} pub-teaser--card pub-teaser--{{ pub.tags.first | default: 'none' }}{% endunless %}">
     {%- if pub.image %}
     <img src="{{ pub.image | relative_url }}" alt="" loading="lazy">
+    {%- else %}
+      {%- comment -%}
+        Card name from `venue`: the part after "AIED 2026: ", or the journal name before ", 30, 447–459 (2025)"
+      {%- endcomment -%}
+      {%- assign card_name = pub.venue | default: pub.venue_short %}
+      {%- if card_name contains ": " %}
+        {%- assign card_name = card_name | split: ": " | last %}
+      {%- else %}
+        {%- assign name_parts = card_name | split: ", " %}
+        {%- assign card_name = "" %}
+        {%- for part in name_parts %}
+          {%- assign first_char = part | slice: 0 %}
+          {%- if "0123456789" contains first_char %}{% break %}{% endif %}
+          {%- if forloop.first %}{% assign card_name = part %}{% else %}{% assign card_name = card_name | append: ", " | append: part %}{% endif %}
+        {%- endfor %}
+      {%- endif %}
+    <div class="pub-card">
+      <span class="pub-card-name">{{ card_name }}</span>
+      {%- if pub.status %}<span class="pub-card-status">{{ pub.status }}</span>{% endif %}
+    </div>
     {%- endif %}
     {%- if pub.venue_short %}
     <abbr class="pub-badge" title="{{ pub.venue }}">{{ pub.venue_short }}</abbr>
@@ -24,6 +48,8 @@
     <div class="pub-authors">{{ pub.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</div>
     <div class="pub-meta">
       {%- if pub.venue %}<em class="pub-venue">{{ pub.venue }}</em>{% endif -%}
+      {%- if pub.index %}<span class="pub-index"> · {{ pub.index }}</span>{% endif -%}
+      {%- if pub.status %}<span class="pub-status">{{ pub.status }}</span>{% endif -%}
       {%- if pub.note %}<span class="pub-note">{{ pub.note }}</span>{% endif -%}
     </div>
     {%- include publication-links.html links=pub.links %}
