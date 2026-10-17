@@ -78,3 +78,24 @@
   font-size: 93%;
   font-style: italic;
 }
+
+// Demo video, 16:9 like the YouTube player
+.research-video {
+  margin: 0 0 16px;
+
+  iframe,
+  video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+    background-color: #000;
+  }
+}
+
+.research-access {
+  margin: 8px 0 0;
+  color: $grey-color-semidark;
+  font-size: $small-font-size;
+}
