@@ -83,6 +83,7 @@ exclude:
   - README.md
   - docs/
   - references/
+  - tools/
   - vendor/
   # Blog is hidden for now (files kept, not built)
   - blog.md

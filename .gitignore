@@ -36,5 +36,8 @@ _site
 # Ref github repos
 /references
 
+# Local tools (demo video recorder etc.), not part of the site
+/tools
+
 # Original papers, slides and posters (public copies live in assets/files/)
 /_publications/
