@@ -12,6 +12,9 @@ hide_title: true
   {%- for project in projects %}
 <section class="research-project" id="{{ project.id }}">
   <h2>{{ project.title }}</h2>
+  {%- if project.tagline %}
+  <p class="research-tagline">{{ project.tagline }}</p>
+  {%- endif %}
   {%- if project.image %}
   <figure class="research-figure">
     <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">

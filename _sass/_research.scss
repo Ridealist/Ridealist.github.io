@@ -1,11 +1,33 @@
+// One card per project so each one reads as its own block
+.research-project {
+  padding: 24px 28px;
+  border: 1px solid $grey-color-light;
+  border-radius: 12px;
+  background-color: #f7f9fc;
+
+  > :last-child,
+  // last full paper row when no linked papers follow it
+  > .pub-container:has(+ .research-paper-links:not(:has(li))) {
+    margin-bottom: 0;
+  }
+
+  @include media-query($on-mobile) {
+    padding: 18px 16px;
+  }
+}
+
 .research-project + .research-project {
-  margin-top: $spacing-unit + 10px;
-  padding-top: $spacing-unit;
-  border-top: 1px solid $grey-color-light;
+  margin-top: $spacing-unit;
 }
 
 .research-project h2 {
-  margin-top: 0;
+  margin: 0;
+}
+
+.research-tagline {
+  margin: 4px 0 14px;
+  color: $grey-color-semidark;
+  font-size: 105%;
 }
 
 .research-figure {
@@ -26,7 +48,12 @@
 
 .research-papers-heading {
   margin: 20px 0 14px;
+  padding-top: 16px;
+  border-top: 1px solid $grey-color-light;
   color: $grey-color-semidark;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 // Papers already on /publications/: a title link to their row there

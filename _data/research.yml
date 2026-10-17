@@ -5,6 +5,7 @@
 # Example entry:
 # - id: "project-short-name"                         # anchor, link as /research/#project-short-name
 #   title: "Project name"
+#   tagline: "One sentence on what the project is"     # optional; shown under the title
 #   image: "/assets/img/research/example.webp"       # optional figure
 #   summary: >-                                      # optional; Markdown
 #     One or two paragraphs about the project.
@@ -16,6 +17,7 @@
 
 - id: "tblt-agent"
   title: "TBLT-Agent"
+  tagline: "Generative AI as a task interlocutor for task-based L2 learning"
   links:
     - label: "Project Page"
       url: "https://ridealist.github.io/team-GSNU/en/"
@@ -23,8 +25,10 @@
 
 - id: "easyphysics"
   title: "EasyPhysics"
+  tagline: "Simulation-based AI peer and tutor for physics inquiry learning"
   publications: [bounded-agency-bjet, peer-tutor-aied26, physics-inquiry-kci]
 
 - id: "slidecaster"
   title: "Slidecaster"
+  tagline: "Human-AI co-authoring of pedagogically grounded micro-learning videos"
   publications: [slidecaster-aied26]
