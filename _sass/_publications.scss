@@ -7,6 +7,10 @@
 $pub-teaser-width: 300px;
 $pub-teaser-height: 170px;
 $pub-badge-strip: 28px;
+$pub-card-none: #f4f5f7;
+$pub-card-aied: #eaf2fd;
+$pub-card-nlp: #f1edfa;
+$pub-card-edutech: #e9f5ee;
 
 .pub-container {
   display: flex;
@@ -47,24 +51,41 @@ $pub-badge-strip: 28px;
   }
 }
 
-// No figure (e.g. under review): keep the frame so rows stay aligned
-.pub-teaser--empty {
-  background-color: #f4f5f7;
-  box-shadow: inset 0 0 0 1px $grey-color-light;
+// No figure: a card with the journal or conference name, tinted by the first topic tag
+.pub-teaser--card {
+  display: flex;
+  background-color: $pub-card-none;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
 
-  // Stacked on mobile an empty frame is just a grey block; keep only the badge
-  @include media-query(680px) {
-    height: 22px;
-    padding: 0;
-    aspect-ratio: auto;
-    background: none;
-    box-shadow: none;
+  &.pub-teaser--aied { background-color: $pub-card-aied; }
+  &.pub-teaser--nlp { background-color: $pub-card-nlp; }
+  &.pub-teaser--edutech { background-color: $pub-card-edutech; }
+}
 
-    .pub-badge {
-      top: 0;
-      left: 0;
-    }
-  }
+.pub-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 14px;
+  text-align: center;
+}
+
+.pub-card-name {
+  color: $grey-color-dark;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.pub-card-status {
+  color: $grey-color-semidark;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .pub-badge {
@@ -161,6 +182,27 @@ span.pub-title {
   text-transform: uppercase;
 }
 
+// Journal indexing and impact factor, read as part of the venue
+.pub-index {
+  color: $grey-color;
+  white-space: nowrap; // keep "IF 13.0" together
+}
+
+// Publication stage (Under review, In progress, Accepted)
+.pub-status {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 0 7px;
+  border: 1px solid $accent-color;
+  border-radius: 999px;
+  color: $accent-color;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.6;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+
 .pub-note {
   margin-left: 8px;
   color: $accent-color;
@@ -183,4 +225,15 @@ span.pub-title {
     margin: 0 0 14px;
     color: $grey-color-semidark;
   }
+}
+
+// Row opened from a link elsewhere (e.g. /publications/#peer-tutor-aied26 on the Research page)
+.pub-container {
+  scroll-margin-top: 16px;
+}
+
+.pub-container:target {
+  border-radius: 8px;
+  outline: 2px solid rgba($brand-color, 0.35);
+  outline-offset: 8px;
 }

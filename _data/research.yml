@@ -1,0 +1,30 @@
+# Research page: one section per project, listed in the order written here.
+# Papers are pulled from _data/publications.yml by their `id`, so each paper
+# is written once and shows on both pages.
+#
+# Example entry:
+# - id: "project-short-name"                         # anchor, link as /research/#project-short-name
+#   title: "Project name"
+#   image: "/assets/img/research/example.webp"       # optional figure
+#   summary: >-                                      # optional; Markdown
+#     One or two paragraphs about the project.
+#   links:                                           # optional; demos, slides, code
+#     - label: "Slides"
+#       url: "/assets/files/talk-slides.pdf"
+#   publications: [paper-short-name]                 # ids from _data/publications.yml;
+#                                                    # use its `unlisted` section to keep a paper off /publications/
+
+- id: "tblt-agent"
+  title: "TBLT-Agent"
+  links:
+    - label: "Project Page"
+      url: "https://ridealist.github.io/team-GSNU/en/"
+  publications: [ai-interlocutor-mlj, ai-interlocutor-system, ai-roles-aaal27]
+
+- id: "easyphysics"
+  title: "EasyPhysics"
+  publications: [bounded-agency-bjet, peer-tutor-aied26, physics-inquiry-kci]
+
+- id: "slidecaster"
+  title: "Slidecaster"
+  publications: [slidecaster-aied26]

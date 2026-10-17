@@ -1,0 +1,53 @@
+.research-project + .research-project {
+  margin-top: $spacing-unit + 10px;
+  padding-top: $spacing-unit;
+  border-top: 1px solid $grey-color-light;
+}
+
+.research-project h2 {
+  margin-top: 0;
+}
+
+.research-figure {
+  margin: 0 0 16px;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    border-radius: 8px;
+  }
+}
+
+.research-summary {
+  color: $grey-color-dark;
+  line-height: 1.65;
+}
+
+.research-papers-heading {
+  margin: 20px 0 14px;
+  color: $grey-color-semidark;
+}
+
+// Papers already on /publications/: a title link to their row there
+.research-paper-links {
+  margin: 0;
+  padding-left: 1.2em;
+  line-height: 1.55;
+
+  li + li {
+    margin-top: 8px;
+  }
+
+  a {
+    color: $brand-color;
+    font-weight: 600;
+  }
+}
+
+.research-paper-venue {
+  display: block;
+  color: $grey-color-semidark;
+  font-size: 93%;
+  font-style: italic;
+}

@@ -3,6 +3,7 @@
 #   conferences -> "Conference and Journal Papers"
 #   kci         -> its "KCI (Korea Citation Index)" subsection, for Korean journals
 #   demos       -> "Posters, Demos, Workshop Papers"
+#   unlisted    -> not on the Publications page; only shown on the Research page by id
 # Empty sections are hidden. Entries are listed in the order written here.
 # `tags` drive the filter chips at the top of the page (/publications/#nlp).
 #
@@ -14,7 +15,9 @@
 #   venue_short: "CHI"                                 # badge on the teaser corner
 #   tags: [aied, nlp]                                  # filter chips; slugs from _data/publication_tags.yml
 #   image: "/assets/img/publications/example.webp"    # optional teaser, 720px wide (empty box if omitted)
-#   note: "Honorable Mention"                          # optional
+#   index: "SSCI · IF 13.2"                            # optional; journal indexing and impact factor
+#   status: "Under review"                             # optional; Under review / In progress / Accepted
+#   note: "Honorable Mention"                          # optional; Demo, Poster, Corresponding author, awards
 #   url: "https://example.com/paper.pdf"               # optional; makes the title a link
 #   links:                                             # "Paper" for a PDF or arXiv; otherwise the publisher
 #                                                      # (ACM DL, Springer, ScienceDirect, JSTOR, KCI)
@@ -35,7 +38,7 @@ preprints:
     venue: "arXiv:2601.14560 (2026)"
     venue_short: "arXiv"
     image: "/assets/img/publications/rewarding-thinking.webp"
-    note: "Under review"
+    status: "Under review"
     url: "https://arxiv.org/abs/2601.14560"
     links:
       - label: "Paper"
@@ -47,7 +50,7 @@ preprints:
     venue: "arXiv:2601.13882 (2026)"
     venue_short: "arXiv"
     image: "/assets/img/publications/openlearnlm.webp"
-    note: "Under review"
+    status: "Under review"
     url: "https://arxiv.org/abs/2601.13882"
     links:
       - label: "Paper"
@@ -55,7 +58,8 @@ preprints:
 
 conferences:
   # 2026
-  - title: "Peer and Tutor in One: A Productive Failure-Based Architecture for Multi-Role Conversational Agents in Physics Learning"
+  - id: "peer-tutor-aied26"
+    title: "Peer and Tutor in One: A Productive Failure-Based Architecture for Multi-Role Conversational Agents in Physics Learning"
     authors: "**Junbo Koh**, Minsun Cho, and Sunyoung Keum"
     tags: [aied]
     venue: "AIED 2026: The 27th International Conference on Artificial Intelligence in Education"
@@ -68,13 +72,6 @@ conferences:
       - label: "Slides"
         url: "/assets/files/peer-tutor-aied2026-slides.pdf"
 
-  - title: "Learner Experiences of Bounded Artificial Agency in Inquiry Learning: Between Pedagogical Steering and Frustration"
-    authors: "**Junbo Koh**, Minsun Cho, Jahyun Jeong, Yoomin Kim, Chanhui Kim, and Sunyoung Keum"
-    tags: [edutech]
-    venue: "British Journal of Educational Technology"
-    venue_short: "BJET"
-    note: "SSCI, IF=13.0, Under review"
-
   # 2025
   - title: "Development and Implementation of a Generative Artificial Intelligence-Enhanced Simulation to Enhance Problem-Solving Skills for Pre-Service Teachers"
     authors: "Jieun Lim, Unggi Lee, **Junbo Koh**, Yeil Jeong, Yunseo Lee, Gyuri Byun, Haewon Jung, Yoonsun Jang, Sanghyeok Lee, and Jewoong Moon"
@@ -82,7 +79,7 @@ conferences:
     venue: "Computers & Education, 232, 105306 (2025)"
     venue_short: "C&E"
     image: "/assets/img/publications/genai-sim-cae25.webp"
-    note: "SCIE/SSCI, IF=13.2"
+    index: "SCIE/SSCI · IF 13.2"
     url: "https://doi.org/10.1016/j.compedu.2025.105306"
     links:
       - label: "ScienceDirect"
@@ -93,7 +90,7 @@ conferences:
     tags: [edutech]
     venue: "Technology, Knowledge and Learning, 30, 447–459 (2025)"
     venue_short: "TKL"
-    note: "ESCI, IF=4.2"
+    index: "ESCI · IF 4.2"
     url: "https://doi.org/10.1007/s10758-024-09756-z"
     links:
       - label: "Springer"
@@ -128,7 +125,7 @@ conferences:
     venue: "Smart Learning Environments, 11(1), 48 (2024)"
     venue_short: "SLE"
     image: "/assets/img/publications/i-see-you.webp"
-    note: "SSCI, IF=17.9"
+    index: "SSCI · IF 17.9"
     url: "https://doi.org/10.1186/s40561-024-00335-4"
     links:
       - label: "Springer"
@@ -140,7 +137,7 @@ conferences:
     venue: "Educational Technology & Society, 27(2), 321–346 (2024)"
     venue_short: "ET&S"
     image: "/assets/img/publications/debo.webp"
-    note: "SSCI, IF=7.1"
+    index: "SSCI · IF 7.1"
     url: "https://www.jstor.org/stable/48766178"
     links:
       - label: "JSTOR"
@@ -153,19 +150,21 @@ kci:
     venue: "Journal of Educational Technology, 41(4), 1643–1682 (2025)"
     venue_short: "JET"
     image: "/assets/img/publications/aidt-teach.webp"
-    note: "KCI, Corresponding author"
+    index: "KCI"
+    note: "Corresponding author"
     url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003286843"
     links:
       - label: "KCI"
         url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003286843"
 
-  - title: "Development of a Prototype Simulation-Based AI System to Support Physics Inquiry Learning"
+  - id: "physics-inquiry-kci"
+    title: "Development of a Prototype Simulation-Based AI System to Support Physics Inquiry Learning"
     authors: "**Junbo Koh**, Jiwoong Park, Chanhui Kim, Yoomin Kim, and Sunyoung Keum"
     tags: [edutech]
     venue: "The Journal of Educational Information and Media, 31(2), 493–517 (2025)"
     venue_short: "JEIM"
     image: "/assets/img/publications/physics-inquiry-kci.webp"
-    note: "KCI"
+    index: "KCI"
     url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003199315"
     links:
       - label: "KCI"
@@ -182,7 +181,7 @@ kci:
     venue: "The Journal of Educational Information and Media, 31(1), 169–193 (2025)"
     venue_short: "JEIM"
     image: "/assets/img/publications/ai-education-scoping-review.webp"
-    note: "KCI"
+    index: "KCI"
     url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003176865"
     links:
       - label: "KCI"
@@ -198,7 +197,7 @@ kci:
     tags: [edutech]
     venue: "Journal of Lifelong Learning Society, 21(3), 82–112 (2025)"
     venue_short: "JLLS"
-    note: "KCI"
+    index: "KCI"
     url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003233716"
     links:
       - label: "KCI"
@@ -210,7 +209,7 @@ kci:
     venue: "Journal of Educational Technology, 41(2), 509–546 (2025)"
     venue_short: "JET"
     image: "/assets/img/publications/mathcodi.webp"
-    note: "KCI"
+    index: "KCI"
     url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003216787"
     links:
       - label: "KCI"
@@ -222,14 +221,15 @@ kci:
     venue: "Journal of Educational Technology, 41(1), 79–109 (2025)"
     venue_short: "JET"
     image: "/assets/img/publications/social-studies-programming.webp"
-    note: "KCI"
+    index: "KCI"
     url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003188332"
     links:
       - label: "KCI"
         url: "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003188332"
 
 demos:
-  - title: "Slidecaster: Human-AI Collaborative Authoring of Pedagogically Grounded Micro-Learning Videos"
+  - id: "slidecaster-aied26"
+    title: "Slidecaster: Human-AI Collaborative Authoring of Pedagogically Grounded Micro-Learning Videos"
     authors: "**Junbo Koh**, Hoetaek Rah, Hyeseong Kwon, Gyuri Byun, and Cheolil Lim"
     tags: [aied]
     venue: "AIED 2026: The 27th International Conference on Artificial Intelligence in Education"
@@ -266,3 +266,39 @@ demos:
     links:
       - label: "Project Page"
         url: "https://neurips.cc/virtual/2023/79074"
+
+unlisted:
+  - id: "bounded-agency-bjet"
+    title: "Learner Experiences of Bounded Artificial Agency in Inquiry Learning: Between Pedagogical Steering and Frustration"
+    authors: "**Junbo Koh**, Minsun Cho, Jahyun Jeong, Yoomin Kim, Chanhui Kim, and Sunyoung Keum"
+    tags: [edutech]
+    venue: "British Journal of Educational Technology"
+    venue_short: "BJET"
+    index: "SSCI · IF 13.0"
+    status: "In progress"
+
+  - id: "ai-interlocutor-mlj"
+    title: "Generative AI as a Task Interlocutor in Task-Based Language Learning: Interactional Roles, Corrective Feedback, and L2 Development"
+    authors: "YouJin Kim, Sak Lee, and **Junbo Koh**"
+    tags: [edutech]
+    venue: "Modern Language Journal"
+    venue_short: "MLJ"
+    index: "SSCI · IF 4.5"
+    status: "In progress"
+
+  - id: "ai-interlocutor-system"
+    title: "Generative AI as a Task Interlocutor: Effects of AI Interactional Roles on Collaborative Task Performance and L2 Learning"
+    authors: "YouJin Kim, Sak Lee, and **Junbo Koh**"
+    tags: [edutech]
+    venue: "System"
+    venue_short: "System"
+    index: "SSCI · IF 8.0"
+    status: "In progress"
+
+  - id: "ai-roles-aaal27"
+    title: "Effects of AI Interactional Roles on Collaborative Task Performance and L2 Learning among Young Learners"
+    authors: "YouJin Kim, Sak Lee, and **Junbo Koh**"
+    tags: [edutech]
+    venue: "AAAL 2027: American Association for Applied Linguistics Conference"
+    venue_short: "AAAL"
+    status: "Accepted"
