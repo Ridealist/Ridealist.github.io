@@ -7,6 +7,27 @@
     }
   });
 
+  // Email links also copy the address: mailto: does nothing when no mail app is set up
+  var toast;
+  document.querySelectorAll('a[href^="mailto:"]').forEach(function (link) {
+    link.addEventListener("click", function () {
+      var address = decodeURIComponent(link.href.slice(7).split("?")[0]);
+      if (!navigator.clipboard) return;
+      navigator.clipboard.writeText(address).then(function () {
+        if (!toast) {
+          toast = document.createElement("div");
+          toast.className = "copy-toast";
+          toast.setAttribute("role", "status");
+          document.body.appendChild(toast);
+        }
+        toast.textContent = "Email copied: " + address;
+        toast.classList.add("is-visible");
+        clearTimeout(toast.timer);
+        toast.timer = setTimeout(function () { toast.classList.remove("is-visible"); }, 2500);
+      }, function () {});
+    });
+  });
+
   // Mobile menu toggle
   var button = document.querySelector(".site-nav .menu-icon");
   var menu = document.querySelector(".site-nav .menu");
