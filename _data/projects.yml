@@ -30,6 +30,8 @@
   title: "EasyPhysics"
   tagline: "A Simulation-Based Physics Inquiry Learning Environment with a Dual-Role Conversational Agent"
   links:
+    - label: "Demo Video"
+      url: "https://youtu.be/veGfrp0Znno"
     - label: "System Link"
       url: "https://ez-physics.streamlit.app/en"
   login_required: true
@@ -39,6 +41,8 @@
   title: "Slidecaster"
   tagline: "A Human–AI Co-Authoring System for Korean Medicine Learning Content"
   links:
+    - label: "Demo Video"
+      url: "https://youtu.be/cJlX0uN5N_A"
     - label: "System Link"
       url: "https://slidecaster.pages.dev/en"
   login_required: true
