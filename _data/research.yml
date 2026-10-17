@@ -5,26 +5,41 @@
 # Example entry:
 # - id: "project-short-name"                         # anchor, link as /research/#project-short-name
 #   title: "Project name"
+#   tagline: "One sentence on what the project is"     # optional; shown under the title
 #   image: "/assets/img/research/example.webp"       # optional figure
 #   summary: >-                                      # optional; Markdown
 #     One or two paragraphs about the project.
+#   video: "https://youtu.be/VIDEO_ID"               # optional demo; YouTube URL or "/assets/video/demo.mp4"
 #   links:                                           # optional; demos, slides, code
 #     - label: "Slides"
 #       url: "/assets/files/talk-slides.pdf"
+#   login_required: true                             # optional; notes that a demo account is available by email
 #   publications: [paper-short-name]                 # ids from _data/publications.yml;
 #                                                    # use its `unlisted` section to keep a paper off /publications/
 
 - id: "tblt-agent"
   title: "TBLT-Agent"
+  tagline: "A Conversational AI System for Student–AI Collaboration in Task-Based Language Learning"
   links:
     - label: "Project Page"
       url: "https://ridealist.github.io/team-GSNU/en/"
+  login_required: true
   publications: [ai-interlocutor-mlj, ai-interlocutor-system, ai-roles-aaal27]
 
 - id: "easyphysics"
   title: "EasyPhysics"
+  tagline: "A Simulation-Based Physics Inquiry Learning Environment with a Dual-Role Conversational Agent"
+  links:
+    - label: "System Link"
+      url: "https://ez-physics.streamlit.app/en"
+  login_required: true
   publications: [bounded-agency-bjet, peer-tutor-aied26, physics-inquiry-kci]
 
 - id: "slidecaster"
   title: "Slidecaster"
+  tagline: "A Human–AI Co-Authoring System for Korean Medicine Learning Content"
+  links:
+    - label: "System Link"
+      url: "https://slidecaster.pages.dev/en"
+  login_required: true
   publications: [slidecaster-aied26]

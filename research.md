@@ -12,6 +12,9 @@ hide_title: true
   {%- for project in projects %}
 <section class="research-project" id="{{ project.id }}">
   <h2>{{ project.title }}</h2>
+  {%- if project.tagline %}
+  <p class="research-tagline">{{ project.tagline }}</p>
+  {%- endif %}
   {%- if project.image %}
   <figure class="research-figure">
     <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" loading="lazy">
@@ -20,7 +23,24 @@ hide_title: true
   {%- if project.summary %}
   <div class="research-summary">{{ project.summary | markdownify }}</div>
   {%- endif %}
+  {%- if project.video %}
+  <figure class="research-video">
+    {%- if project.video contains "youtu" %}
+      {%- comment -%} YouTube watch, youtu.be or embed URL -> embed URL {%- endcomment -%}
+      {%- assign video_id = project.video | split: "v=" | last | split: "youtu.be/" | last | split: "embed/" | last | split: "&" | first | split: "?" | first %}
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ video_id }}" title="{{ project.title }} demo video" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    {%- else %}
+    <video src="{{ project.video | relative_url }}" controls muted playsinline preload="metadata"></video>
+    {%- endif %}
+  </figure>
+  {%- endif %}
   {%- include publication-links.html links=project.links %}
+  {%- if project.login_required %}
+    {%- assign contact_email = site.footer.contact | where: "name", "Email" | first %}
+  <p class="research-access">
+    Login required · Demo account available on request{% if contact_email %} via <a href="{{ contact_email.url }}?subject={{ project.title | append: ' demo account' | url_encode | replace: '+', '%20' }}">email</a>{% endif %}
+  </p>
+  {%- endif %}
   {%- if project.publications.size > 0 %}
   <h3 class="research-papers-heading">Related Papers</h3>
     {%- comment -%} Unlisted papers are not on /publications/, so they get a full row here, text only {%- endcomment -%}
