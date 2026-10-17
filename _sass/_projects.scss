@@ -1,14 +1,18 @@
 // One card per project so each one reads as its own block
-.research-project {
+.project-card {
   padding: 24px 28px;
   border: 1px solid $grey-color-light;
   border-radius: 12px;
   background-color: #f7f9fc;
 
   > :last-child,
-  // last full paper row when no linked papers follow it
-  > .pub-container:has(+ .research-paper-links:not(:has(li))) {
+  > .pub-container:last-of-type {
     margin-bottom: 0;
+  }
+
+  // Space between full paper rows and the linked papers after them, only when there are any
+  > .pub-container + .project-paper-links > li:first-child {
+    margin-top: 24px;
   }
 
   @include media-query($on-mobile) {
@@ -16,21 +20,21 @@
   }
 }
 
-.research-project + .research-project {
+.project-card + .project-card {
   margin-top: $spacing-unit;
 }
 
-.research-project h2 {
+.project-card h2 {
   margin: 0;
 }
 
-.research-tagline {
+.project-tagline {
   margin: 4px 0 14px;
   color: $grey-color-semidark;
   font-size: 105%;
 }
 
-.research-figure {
+.project-figure {
   margin: 0 0 16px;
 
   img {
@@ -41,12 +45,12 @@
   }
 }
 
-.research-summary {
+.project-summary {
   color: $grey-color-dark;
   line-height: 1.65;
 }
 
-.research-papers-heading {
+.project-papers-heading {
   margin: 20px 0 14px;
   padding-top: 16px;
   border-top: 1px solid $grey-color-light;
@@ -57,7 +61,7 @@
 }
 
 // Papers already on /publications/: a title link to their row there
-.research-paper-links {
+.project-paper-links {
   margin: 0;
   padding-left: 1.2em;
   line-height: 1.55;
@@ -72,7 +76,7 @@
   }
 }
 
-.research-paper-venue {
+.project-paper-venue {
   display: block;
   color: $grey-color-semidark;
   font-size: 93%;
@@ -80,7 +84,7 @@
 }
 
 // Demo video, 16:9 like the YouTube player
-.research-video {
+.project-video {
   margin: 0 0 16px;
 
   iframe,
@@ -94,7 +98,7 @@
   }
 }
 
-.research-access {
+.project-access {
   margin: 8px 0 0;
   color: $grey-color-semidark;
   font-size: $small-font-size;

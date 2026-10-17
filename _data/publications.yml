@@ -3,7 +3,7 @@
 #   conferences -> "Conference and Journal Papers"
 #   kci         -> its "KCI (Korea Citation Index)" subsection, for Korean journals
 #   demos       -> "Posters, Demos, Workshop Papers"
-#   unlisted    -> not on the Publications page; only shown on the Research page by id
+#   unlisted    -> not on the Publications page; only shown on the Projects page by id
 # Empty sections are hidden. Entries are listed in the order written here.
 # `tags` drive the filter chips at the top of the page (/publications/#nlp).
 #

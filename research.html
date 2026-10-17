@@ -1,0 +1,21 @@
+---
+layout: null
+permalink: /research/
+sitemap: false
+---
+{%- comment -%} The Projects page used to live at /research/; send old links there, keeping any #project anchor {%- endcomment -%}
+{%- assign target = '/projects/' | relative_url -%}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting to Projects</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ target | absolute_url }}">
+  <meta http-equiv="refresh" content="0; url={{ target }}">
+  <script>location.replace("{{ target }}" + location.hash);</script>
+</head>
+<body>
+  <p>This page has moved to <a href="{{ target }}">Projects</a>.</p>
+</body>
+</html>
