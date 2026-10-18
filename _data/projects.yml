@@ -23,7 +23,7 @@
   links:
     - label: "Project Page"
       url: "https://ridealist.github.io/team-GSNU/en/"
-  login_required: true
+  login_required: false
   publications: [ai-interlocutor-mlj, ai-interlocutor-system, ai-roles-aaal27]
 
 - id: "easyphysics"
@@ -34,7 +34,7 @@
       url: "https://youtu.be/veGfrp0Znno"
     - label: "System Link"
       url: "https://ez-physics.streamlit.app/en"
-  login_required: true
+  login_required: false
   publications: [bounded-agency-bjet, peer-tutor-aied26, physics-inquiry-kci]
 
 - id: "slidecaster"
