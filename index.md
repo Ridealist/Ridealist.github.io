@@ -17,3 +17,5 @@ I'm currently exploring <strong>how LLMs can support language learners' agency t
 <p>
 Feel free to reach out by email if you'd like to chat about research or anything else!
 </p>
+
+<p><a href="https://docs.google.com/document/d/{{ site.data.profile.cv.google_doc }}/export?format=pdf">Download CV (PDF)</a></p>
