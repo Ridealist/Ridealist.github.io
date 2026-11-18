@@ -2,6 +2,12 @@
 # `text` supports Markdown, e.g. "Paper accepted to [CHI 2026](https://chi2026.acm.org/)!"
 # Only the month is shown; within a month, a later day is listed first.
 items:
+  - date: 2026-11-01
+    text: "Led an open class for English speaking using my \"TBLT-Agent\" app to foster students’ L2 communicative competence 🗣️"
+
+  - date: 2026-10-01
+    text: "Provided research consultation on AI agents supporting learner agency, drawing on my master’s thesis. 💡"
+
   - date: 2026-08-28
     text: "ModumView, our real-time small group collaborative learning dashboard, won a Special Judges' Award at the Seoul Metropolitan Office of Education teacher-developer hackathon 🏆"
 
