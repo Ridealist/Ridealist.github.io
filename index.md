@@ -15,7 +15,9 @@ I'm currently exploring <strong>how LLMs can support language learners' agency t
 </p>
 
 <p>
-Feel free to reach out by email if you'd like to chat about research or anything else!
+{% assign email_contact = site.footer.contact | where: "name", "Email" | first %}
+{% assign linkedin_contact = site.footer.follow | where: "name", "LinkedIn" | first %}
+Feel free to reach out by <a href="{{ email_contact.url }}">email</a> or <a href="{{ linkedin_contact.url }}">message</a> if you'd like to chat about research or anything else!
 </p>
 
 <p><a href="https://docs.google.com/document/d/{{ site.data.profile.cv.google_doc }}/export?format=pdf">Download CV (PDF)</a></p>
