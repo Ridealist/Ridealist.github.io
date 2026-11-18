@@ -1,7 +1,7 @@
-# Profile photo shown on the home page (top right).
+# Profile photo shown above the home page introduction.
 # Put the image in assets/img/ and set the path, e.g. "/assets/img/profile.jpg".
-avatar: "/assets/img/profile.jpg"
-avatar_alt: "Junbo Koh"
+avatar: "/assets/img/profile-presentation.jpg"
+avatar_alt: "Junbo Koh presenting at AIED 2026"
 
 # CV page. Embeds the Google Doc `google_doc` (the ID in docs.google.com/document/d/<ID>/edit),
 # so edits to the doc show up on the site without a rebuild. The doc must be shared as

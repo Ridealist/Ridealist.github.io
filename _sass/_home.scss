@@ -1,13 +1,17 @@
 .profile-pic {
-  float: right;
-  width: 240px;
-  margin: 0 0 $spacing-half 20px;
+  aspect-ratio: 145 / 56;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: $spacing-unit;
   border: 1px solid #ccc;
 
-  @include media-query($on-mobile) {
-    float: none;
-    display: block;
-    margin: 0 0 20px;
+  // Show the selected 2900 × 1120 region starting at (420, 550) in the 3520 × 1980 photo.
+  img {
+    position: absolute;
+    max-width: none;
+    width: 121.3793103%;
+    left: -14.4827586%;
+    top: -49.1071429%;
   }
 }
 

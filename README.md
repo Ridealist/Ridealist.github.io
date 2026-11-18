@@ -80,7 +80,8 @@ footer:
 ### Home page and news
 
 - **Intro text:** edit `index.md`.
-- **Profile photo:** set `avatar` in `_data/profile.yml`. It is shown at the top right, 192px wide.
+- **Profile photo:** set `avatar` in `_data/profile.yml`. It spans the content width above the introduction.
+  The current presentation photo's crop is set in `_sass/_home.scss`; adjust it when replacing the photo.
   Strip location metadata before adding a phone photo, for example: `ffmpeg -i photo.jpeg -map_metadata -1 assets/img/profile.jpg`.
 - **News:** add items to `_data/news.yml`. They are sorted newest first, and `text` supports Markdown.
 

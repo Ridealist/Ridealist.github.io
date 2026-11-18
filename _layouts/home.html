@@ -4,7 +4,9 @@ layout: default
 {%- assign profile = site.data.profile -%}
 <div class="home">
   {%- if profile.avatar %}
-  <img class="profile-pic" src="{{ profile.avatar | relative_url }}" alt="{{ profile.avatar_alt | default: site.title }}">
+  <div class="profile-pic">
+    <img src="{{ profile.avatar | relative_url }}" alt="{{ profile.avatar_alt | default: site.title }}">
+  </div>
   {%- endif %}
 
   <div class="home-intro">
