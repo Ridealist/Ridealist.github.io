@@ -1,7 +1,7 @@
 ---
 layout: home
-seo_title: "Junbo Koh | Learning Engineering & Human-Centered AI"
-seo_description: "Junbo Koh (고준보) is a researcher in learning engineering and human-centered AI, focusing on learner agency."
+seo_title: "Junbo Koh | Learning Sciences & Human-Centered AI"
+seo_description: "Junbo Koh (고준보) is a researcher in learning sciences and human-centered AI, focusing on learner agency."
 ---
 
 <p class="pub-links home-cv"><a href="https://docs.google.com/document/d/{{ site.data.profile.cv.google_doc }}/export?format=pdf">Download CV (PDF)</a></p>
